@@ -12,6 +12,9 @@
      }
      function index(){
          $data['activef']=TRUE;
+         $data1=  $this->show_records();
+         $data2=  $this->show_sold();
+         $data=$data1+$data2;
          $this->load->view('dashbord',$data);
      }
     function petrol(){

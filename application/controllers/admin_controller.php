@@ -24,11 +24,12 @@
              $this->load->view('admin_dashbord',$data);
          }  else {
              $this->load->model('admin_model');
+             $admin_name=  $this->session->userdata('username');
              $number_litres=  $this->input->post('nl');
              $amount_parchased=  $this->input->post('amnt');
              $expected_amount=  $this->input->post('exp');
              $data_entrance=  $this->input->post('date');
-             $this->admin_model->petrol_insert($number_litres,$amount_parchased,$expected_amount,$data_entrance);
+             $this->admin_model->petrol_insert($number_litres,$amount_parchased,$expected_amount,$data_entrance,$admin_name);
              $data['smg']='<p class="text-center alert-success">Successifully added</p>';
              $this->load->view('admin_dashbord',$data);
          }
@@ -46,10 +47,11 @@
          }  else {
              $this->load->model('admin_model');
              $number_litres=  $this->input->post('nl1');
+             $admin_name=  $this->session->userdata('username');
              $amount_parchased=  $this->input->post('amnt1');
              $expected_amount=  $this->input->post('exp1');
              $data_entrance=  $this->input->post('date1');
-             $this->admin_model->diesel_insert($number_litres,$amount_parchased,$expected_amount,$data_entrance);
+             $this->admin_model->diesel_insert($number_litres,$amount_parchased,$expected_amount,$data_entrance,$admin_name);
              $data['smg1']='<p class="text-center alert-success">Successifully added</p>';
              $this->load->view('admin_dashbord',$data);
          }
@@ -66,10 +68,11 @@
          }  else {
              $this->load->model('admin_model');
              $number_litres=  $this->input->post('nl2');
+             $admin_name=  $this->session->userdata('username');
              $amount_parchased=  $this->input->post('amnt2');
              $expected_amount=  $this->input->post('exp2');
              $data_entrance=  $this->input->post('date2');
-             $this->admin_model->kerosine_insert($number_litres,$amount_parchased,$expected_amount,$data_entrance);
+             $this->admin_model->kerosine_insert($number_litres,$amount_parchased,$expected_amount,$data_entrance,$admin_name);
              $data['smg2']='<p class="text-center alert-success">Successifully added</p>';
              $this->load->view('admin_dashbord',$data);
          }
@@ -86,10 +89,11 @@
          }  else {
              $this->load->model('admin_model');
              $number_litres=  $this->input->post('nl3');
+             $admin_name=  $this->session->userdata('username');
              $amount_parchased=  $this->input->post('amnt3');
              $expected_amount=  $this->input->post('exp3');
              $data_entrance=  $this->input->post('date3');
-             $this->admin_model->oil_insert($number_litres,$amount_parchased,$expected_amount,$data_entrance);
+             $this->admin_model->oil_insert($number_litres,$amount_parchased,$expected_amount,$data_entrance,$admin_name);
              $data['smg3']='<p class="text-center alert-success">Successifully added</p>';
              $this->load->view('admin_dashbord',$data);
          }

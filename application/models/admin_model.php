@@ -11,7 +11,7 @@
               'entray_date'=>$data_entrance,
               'admin_name'=>$admin_name
           );
-          $res=  $this->db->get_where('tb_petrol',array('entray_date'=>$data_entrance));
+          $res=  $this->db->get_where('tb_petrol',array('admin_name'=>$admin_name,'entray_date'=>$data_entrance));
           if($res->num_rows()===1){
               $row=$res->row();
               $array=array(
@@ -35,7 +35,7 @@
               'entray_date'=>$data_entrance,
               'admin_name'=>$admin_name
           );
-          $res=  $this->db->get_where('tb_diesel',array('entray_date'=>$data_entrance));
+          $res=  $this->db->get_where('tb_diesel',array('admin_name'=>$admin_name,'entray_date'=>$data_entrance));
           if($res->num_rows()===1){
               $row=$res->row();
               $array=array(
@@ -59,7 +59,7 @@
               'entray_date'=>$data_entrance,
               'admin_name'=>$admin_name
           );
-          $res=  $this->db->get_where('tb_kerosine',array('entray_date'=>$data_entrance));
+          $res=  $this->db->get_where('tb_kerosine',array('admin_name'=>$admin_name,'entray_date'=>$data_entrance));
           if($res->num_rows()===1){
               $row=$res->row();
               $array=array(
@@ -77,13 +77,13 @@
       }
       function oil_insert($number_litres,$amount_parchased,$expected_amount,$data_entrance,$admin_name){
           $data_entry=array(
-              'Litre_oil'=>$number_litres,
+             'Litre_oil'=>$number_litres,
               'purchased_amount'=>$amount_parchased,
               'expected_amount'=>$expected_amount,
               'entray_date'=>$data_entrance,
               'admin_name'=>$admin_name
           );
-          $res=  $this->db->get_where('tb_oil',array('entray_date'=>$data_entrance));
+          $res=  $this->db->get_where('tb_oil',array('admin_name'=>$admin_name,'entray_date'=>$data_entrance));
           if($res->num_rows()===1){
               $row=$res->row();
               $array=array(

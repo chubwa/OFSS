@@ -10,7 +10,7 @@
             <div class="in tab-pane <?php if(isset($activef)){ echo 'active';}?>" id="feeds">
                 <label class="text text-info text-justify">PETROL</label>
             <table class="table table-striped table-condensed">
-                <tr><td>Litres of Petrol(L)</td><td><input type="text" name="ptl" class="form-control"></td><td>COST($ or TSH)</td><td><input type="text" name="cst" class="form-control"></td></tr>
+                <tr><td>Litres of Petrol(L)</td><td><span class="badge"><?php echo ''.$number_litre-$sold_litres;?></span></td><td>COST($ or TSH)</td><td><span></span></td></tr>
                 </table>
                 <label class="text text-info text-justify">DIESEL</label>
                 <table class="table table-striped table-condensed">
