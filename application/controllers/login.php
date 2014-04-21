@@ -35,30 +35,45 @@
               $this->dashbord($username);
               
          } else {
-               $data['records']='<p color="blue">The compination of username or Email and password does not match</p>';
+               $data['records']='<font color="red">The compination of username or Email and password does not match</font>';
                $this->load->view('home',$data);
             }
         }
      }
      function master_page($username){
          $result=  $this->db->get_where('tb_user',array('email'=>$username,'position'=>'user'));
+         $result1=  $this->db->get_where('tb_user',array('email'=>$username,'position'=>'admin'));
          if($result->num_rows()===1){
            $array_sess=array(
                'apartment'=>'user'
            );  
            $this->session->set_userdata($array_sess);
            redirect('dashbord');
-         }
+         }elseif ($result1->num_rows()===1) {
+            $array_sess=array(
+                'apartment'=>'admin'
+            );
+            $this->session->set_userdata($array_sess);
+            redirect('admin_controller');
+        }
      }
      function dashbord($username){
          $query=  $this->db->get_where('tb_user',array('username'=>$username,'position'=>'user'));
+         $query1=  $this->db->get_where('tb_user',array('username'=>$username,'position'=>'admin'));
          if($query->num_rows()===1){
              $sess_array=array(
                  'apartment'=>'user'
              );
              $this->session->set_userdata($sess_array);
              redirect('dashbord');
-         }
+         }elseif ($query1->num_rows()===1) {
+            $sess_array=array(
+                'apartment'=>'admin'
+            );
+            $this->session->set_userdata($sess_array);
+            redirect('admin_controller');
+        }
      }
+     
  }
 

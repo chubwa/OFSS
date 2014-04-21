@@ -1,25 +1,54 @@
-<?php include_once 'header1.php';?>
+<?php include_once 'header2.php';?>
 <div id="content">
     <ul class="nav nav-tabs">
         <li></li>
     </ul>
     <div class="tab-content" style="display: block">
-        <div class="col-lg-5"  id="dt">
-            <div class=" panel panel-primary disabled">
-                <div class="panel-heading">OFTS</div>
-            <div class="panel-body">
-                <p class="text-muted">Welcome to <strong>OILING FILLING TRACKING SYSTEM</strong></p>
-                <p class="text-info">As to become part of this system your required to register yourself</p>
-                <p class="text-info">After registering you will be enable to login OFTS</p>
-                <p class="text-info">You are recommended to give the valid details of yours</p>
-                <p class="text-info">No one will be responsible for any enconvinience</p>
+        <div class="col-lg-4"  id="dt">
+            <div class="panel panel-primary">
+            <div class="panel-heading">
+                <p>System Setting</p>
             </div>
+            <div class="list-group">
+                <a href="<?php echo site_url('register_controller');?>" class="list-group-item btn-link">
+                        Send notifications to member
+                   </a>
+                    <a href="#" class="list-group-item">
+                        Report problem
+                    </a>
+                <a href="<?php echo site_url('admin_controller');?>" class="list-group-item">
+                        <span class="badge">0</span>
+                        Back to manage product
+                    </a>
+                    <a href="#" class="list-group-item">
+                        <span class="badge">0</span>
+                        System alerts
+                    </a>
+                    <a href="#" class="list-group-item">
+                        <span class="badge">0</span>
+                        Balance in Litres
+                    </a>
+                     <a href="#" class="list-group-item">
+                        View summary 
+                    
+                    </a>
+                    <a href="#" class="list-group-item">
+                       <span class="badge">$0</span>
+                        Outstanding profit 
+                    </a>
+                   <a href="#" class="list-group-item">
+                       <span class="badge">$1500000</span>
+                        Expected Total profit 
+                    </a>
             </div>
+            
+       </div>
         </div>
         <div class="col-lg-7" id="dt">
             <div class="panel-primary dt1">
-                <div class="panel-heading"><label>Register</label></div>
+                <div class="panel-heading"><label>Add an account</label></div>
                 <div class="well bs-component">
+                    <?php if(!empty($smg)){echo'<label class="label-success" style="margin-left:50px;">'. $smg.'</label>';}?>
                     <?php echo form_open('register_controller/register_form',array('class'=>'form-horizontal panel-body'));?>
                     <div class="form-group">
                         <label for="firstname" class="col-lg-4 control-label">First name</label>
@@ -56,13 +85,6 @@
                             <input type="password" name="pd" class="form-control fs5" placeholder="password">
                         </div>
                     </div>
-                    <div class="form-group">
-                        <label for="confirm pass" class="col-lg-4 control-label">Confirm password</label>
-                        <div class="col-lg-8">
-                            <font color="red" class="f6"><?php echo form_error('confpd');?></font>
-                            <input type="password" name="confpd" class="form-control fs6" placeholder="confirm password">
-                        </div>
-                    </div>
                     <div class="text-right"><button type="submit" class="btn bg-primary sng">Sign up</button></div>
                     <?php echo form_close();?>
                 </div>
@@ -71,36 +93,6 @@
         </div>
     </div>
 </div>
-<script>
-    $(document).ready(function(){
-      $('.sng').click(function(){
-         $('form').submit(function(e){
-             if($('.fs').val()===''){
-                $('.f1').html().$('.f1').valueOf();
-                return false;
-             }elseif($('.fs1').val()===''){
-                 $('.f2').valueOf();
-                 return false;
-             }
-            $('.load').html('<img src="<?php echo base_url('img/loading.gif');?>">');
-            var formdata=$(this).serializeArray();
-            var formurl=$(this).attr('action');
-            $.ajax({
-                url:formurl,
-                type:"POST",
-                data:formdata,
-                success:function(data){
-                 $('.dt1').hide();
-                 setTimeout(function(){
-                    $('.load').html('<p class="alert alert-success">Successifly registered.!</p>').fadeOut(4000); 
-                 },2000);
-                }
-            });
-            e.preventDefault();
-         });
-         $('form').submit();
-      });  
-    });
-</script>
+
 <?php include_once 'footer.php';?>
 

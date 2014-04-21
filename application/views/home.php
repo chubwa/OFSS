@@ -1,29 +1,8 @@
 <?php include_once 'header.php';?>
 <div id="content1">
-    <div class="col-lg-4">
-            <div class="cst1">
-        <div class="panel panel-primary">
-            <div class="panel-heading">
-                <p>Failed to Login.?</p>
-            </div>
-            <div class="list-group">
-                   <a href="#" class="list-group-item">
-                        Report problem
-                   </a>
-                <a href="<?php echo site_url('register_controller/forgot_password');?>" class="list-group-item">
-                        Forgot password
-                    </a>
-                    <a href="#" class="list-group-item">
-                        <span class="badge">0</span>
-                        Help
-                    </a>
-            </div>
-        </div>
-            </div>
-    </div>
-        <div class="col-lg-8">
+    <div class="col-lg-9">
           <div class="cst">
-            <div class="panel panel-primary " style="margin-left: 80px;">
+            <div class="panel panel-primary " style="margin-left: 200px;">
             <div class="panel-heading"><label>Login</label></div>
             <div class="well-sm">
                 <?php if(!empty($records)){
@@ -56,6 +35,20 @@
             <?php echo form_close();?>
             </div>
         </div>
+              <ul class="nav nav-pills" style="margin-left: 80px;">
+                <li><a href="<?php echo site_url('login');?>">
+                        Login<span class="badge"></span>
+                   </a></li>
+                   <li><a href="<?php echo site_url('register_controller/forgot_password');?>">
+                        Forgot password<span class="badge"></span>
+                     </a>
+                   </li>
+                   <li><a href="<?php echo site_url('');?>">
+                        Help<span class="badge">0</span>
+                     </a>
+                   </li>
+            </ul>
+            
             </div>
     </div>
    

@@ -19,16 +19,6 @@
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav pull-right">
                         <li class="active"><a href="#">Home</a></li>
-                        <li class="dropdown">
-                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Services<b class="caret"></b></a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#">Diesel</a></li>
-                                    <li><a href="#">Kerosine</a></li>
-                                    <li><a href="#">Petrol</a></li>
-                                </ul> 
-                        </li>
-                        <li><a href="#">Contacts</a></li>
-                        <li><a href="<?php echo site_url('start');?>" class="btn-group-sm">Login <b class="glyphicon glyphicon-move"></b></a></li>
                     </ul>
                 </div>
             </div>

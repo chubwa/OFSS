@@ -13,8 +13,7 @@
          $this->form_validation->set_rules('sn','Second name','trim|required|xss_clean');
          $this->form_validation->set_rules('us','Username','trim|required|is_unique[tb_user.username]|xss_clean');
          $this->form_validation->set_rules('em','Email','trim|required|valid_email|is_unique[tb_user.email]|xss_clean');
-         $this->form_validation->set_rules('pd','Password','trim|required|matches[confpd]|alpha_numeric|min_lenght[8]|xss_clean');
-         $this->form_validation->set_rules('confpd','Confirm password','trim|required|xss_clean');
+         $this->form_validation->set_rules('pd','Password','trim|required|min_lenght[8]|xss_clean');
          if($this->form_validation->run()===FALSE){
              $this->load->view('register_view');
          }  else {
@@ -25,6 +24,8 @@
              $email=  $this->input->post('em');
              $password= md5($this->input->post('pd'));
              $this->registration_model->registration($first_name,$sec_name,$username,$email,$password);
+             $data['smg']='<font color="blue">Account of'.' '.ucfirst(strtolower(addslashes($username))).' has successifully created</font>';
+              $this->load->view('register_view',$data);
          }
      }
      function forgot_password(){
