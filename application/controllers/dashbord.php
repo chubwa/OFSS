@@ -11,13 +11,44 @@
         }
      }
      function index(){
-         $data['activef']=TRUE;
          $data1=  $this->show_records();
          $data2=  $this->show_sold();
-         $data=$data1+$data2;
+         $data3=  $this->show_amount();
+         $data4=  $this->show_sold_amount();
+         $data5= $this->diesel_show();
+         $data6=  $this->diesel_sold();
+         $data7=  $this->diesel_sold_amount();
+         $data8=  $this->diesel_amount();
+         $data9=  $this->kerosine_amount();
+         $data10=  $this->kerosine_show();
+         $data11=  $this->kerosine_sold();
+         $data12=  $this->kerosine_sold_amount();
+         $data13=  $this->oil_amount();
+         $data14=  $this->oil_show();
+         $data15=  $this->oil_sold();
+         $data16=  $this->oil_sold_amount();
+         $data=$data1+$data2+$data3+$data4+$data5+$data6+$data7+$data8+$data9+$data10+$data11+$data12+$data13+$data14+$data15+$data16;
+         $data['activef']=TRUE;
          $this->load->view('dashbord',$data);
      }
     function petrol(){
+        $data1=  $this->show_records();
+         $data2=  $this->show_sold();
+         $data3=  $this->show_amount();
+         $data4=  $this->show_sold_amount();
+         $data5= $this->diesel_show();
+         $data6=  $this->diesel_sold();
+         $data7=  $this->diesel_sold_amount();
+         $data8=  $this->diesel_amount();
+         $data9=  $this->kerosine_amount();
+         $data10=  $this->kerosine_show();
+         $data11=  $this->kerosine_sold();
+         $data12=  $this->kerosine_sold_amount();
+         $data13=  $this->oil_amount();
+         $data14=  $this->oil_show();
+         $data15=  $this->oil_sold();
+         $data16=  $this->oil_sold_amount();
+         $data=$data1+$data2+$data3+$data4+$data5+$data6+$data7+$data8+$data9+$data10+$data11+$data12+$data13+$data14+$data15+$data16;
         $data['activef1']=TRUE;
         $data['active']=TRUE;
         $data['active5']=TRUE;
@@ -39,6 +70,23 @@
         }
     }
     function petrol_credit(){
+        $data1=  $this->show_records();
+         $data2=  $this->show_sold();
+         $data3=  $this->show_amount();
+         $data4=  $this->show_sold_amount();
+         $data5= $this->diesel_show();
+         $data6=  $this->diesel_sold();
+         $data7=  $this->diesel_sold_amount();
+         $data8=  $this->diesel_amount();
+         $data9=  $this->kerosine_amount();
+         $data10=  $this->kerosine_show();
+         $data11=  $this->kerosine_sold();
+         $data12=  $this->kerosine_sold_amount();
+         $data13=  $this->oil_amount();
+         $data14=  $this->oil_show();
+         $data15=  $this->oil_sold();
+         $data16=  $this->oil_sold_amount();
+         $data=$data1+$data2+$data3+$data4+$data5+$data6+$data7+$data8+$data9+$data10+$data11+$data12+$data13+$data14+$data15+$data16;
         $data['activef1']=TRUE;
         $data['active']=TRUE;
         $data['active6']=TRUE;
@@ -62,6 +110,23 @@
         }
     }
     function diesel(){
+        $data1=  $this->show_records();
+         $data2=  $this->show_sold();
+         $data3=  $this->show_amount();
+         $data4=  $this->show_sold_amount();
+         $data5= $this->diesel_show();
+         $data6=  $this->diesel_sold();
+         $data7=  $this->diesel_sold_amount();
+         $data8=  $this->diesel_amount();
+         $data9=  $this->kerosine_amount();
+         $data10=  $this->kerosine_show();
+         $data11=  $this->kerosine_sold();
+         $data12=  $this->kerosine_sold_amount();
+         $data13=  $this->oil_amount();
+         $data14=  $this->oil_show();
+         $data15=  $this->oil_sold();
+         $data16=  $this->oil_sold_amount();
+         $data=$data1+$data2+$data3+$data4+$data5+$data6+$data7+$data8+$data9+$data10+$data11+$data12+$data13+$data14+$data15+$data16;
         $data['activef1']=TRUE;
         $data['active1']=TRUE;
         $data['active7']=TRUE;
@@ -84,6 +149,23 @@
         }
     }
     function diesel_credit(){
+        $data1=  $this->show_records();
+         $data2=  $this->show_sold();
+         $data3=  $this->show_amount();
+         $data4=  $this->show_sold_amount();
+         $data5= $this->diesel_show();
+         $data6=  $this->diesel_sold();
+         $data7=  $this->diesel_sold_amount();
+         $data8=  $this->diesel_amount();
+         $data9=  $this->kerosine_amount();
+         $data10=  $this->kerosine_show();
+         $data11=  $this->kerosine_sold();
+         $data12=  $this->kerosine_sold_amount();
+         $data13=  $this->oil_amount();
+         $data14=  $this->oil_show();
+         $data15=  $this->oil_sold();
+         $data16=  $this->oil_sold_amount();
+         $data=$data1+$data2+$data3+$data4+$data5+$data6+$data7+$data8+$data9+$data10+$data11+$data12+$data13+$data14+$data15+$data16;
         $data['activef1']=TRUE;
         $data['active1']=TRUE;
         $data['active8']=TRUE;
@@ -109,6 +191,23 @@
         }
     }
     function kerosine(){
+        $data1=  $this->show_records();
+         $data2=  $this->show_sold();
+         $data3=  $this->show_amount();
+         $data4=  $this->show_sold_amount();
+         $data5= $this->diesel_show();
+         $data6=  $this->diesel_sold();
+         $data7=  $this->diesel_sold_amount();
+         $data8=  $this->diesel_amount();
+         $data9=  $this->kerosine_amount();
+         $data10=  $this->kerosine_show();
+         $data11=  $this->kerosine_sold();
+         $data12=  $this->kerosine_sold_amount();
+         $data13=  $this->oil_amount();
+         $data14=  $this->oil_show();
+         $data15=  $this->oil_sold();
+         $data16=  $this->oil_sold_amount();
+         $data=$data1+$data2+$data3+$data4+$data5+$data6+$data7+$data8+$data9+$data10+$data11+$data12+$data13+$data14+$data15+$data16;
         $data['activef1']=TRUE;
         $data['active2']=TRUE;
         $data['active9']=TRUE;
@@ -132,6 +231,23 @@
         }
     }
     function kerosine_credit(){
+        $data1=  $this->show_records();
+         $data2=  $this->show_sold();
+         $data3=  $this->show_amount();
+         $data4=  $this->show_sold_amount();
+         $data5= $this->diesel_show();
+         $data6=  $this->diesel_sold();
+         $data7=  $this->diesel_sold_amount();
+         $data8=  $this->diesel_amount();
+         $data9=  $this->kerosine_amount();
+         $data10=  $this->kerosine_show();
+         $data11=  $this->kerosine_sold();
+         $data12=  $this->kerosine_sold_amount();
+         $data13=  $this->oil_amount();
+         $data14=  $this->oil_show();
+         $data15=  $this->oil_sold();
+         $data16=  $this->oil_sold_amount();
+         $data=$data1+$data2+$data3+$data4+$data5+$data6+$data7+$data8+$data9+$data10+$data11+$data12+$data13+$data14+$data15+$data16;
         $data['activef1']=TRUE;
         $data['active10']=TRUE;
         $data['active2']=TRUE;
@@ -158,6 +274,23 @@
         }
     }
     function oil(){
+        $data1=  $this->show_records();
+         $data2=  $this->show_sold();
+         $data3=  $this->show_amount();
+         $data4=  $this->show_sold_amount();
+         $data5= $this->diesel_show();
+         $data6=  $this->diesel_sold();
+         $data7=  $this->diesel_sold_amount();
+         $data8=  $this->diesel_amount();
+         $data9=  $this->kerosine_amount();
+         $data10=  $this->kerosine_show();
+         $data11=  $this->kerosine_sold();
+         $data12=  $this->kerosine_sold_amount();
+         $data13=  $this->oil_amount();
+         $data14=  $this->oil_show();
+         $data15=  $this->oil_sold();
+         $data16=  $this->oil_sold_amount();
+         $data=$data1+$data2+$data3+$data4+$data5+$data6+$data7+$data8+$data9+$data10+$data11+$data12+$data13+$data14+$data15+$data16;
         $data['active3']=TRUE;
         $data['activef1']=TRUE;
         $data['active11']=TRUE;
@@ -182,6 +315,23 @@
         }
     }
     function oil_credit(){
+        $data1=  $this->show_records();
+        $data2=  $this->show_sold();
+        $data3=  $this->show_amount();
+        $data4=  $this->show_sold_amount();
+        $data5= $this->diesel_show();
+        $data6=  $this->diesel_sold();
+        $data7=  $this->diesel_sold_amount();
+        $data8=  $this->diesel_amount();
+        $data9=  $this->kerosine_amount();
+        $data10=  $this->kerosine_show();
+        $data11=  $this->kerosine_sold();
+        $data12=  $this->kerosine_sold_amount();
+        $data13=  $this->oil_amount();
+        $data14=  $this->oil_show();
+        $data15=  $this->oil_sold();
+        $data16=  $this->oil_sold_amount();
+        $data=$data1+$data2+$data3+$data4+$data5+$data6+$data7+$data8+$data9+$data10+$data11+$data12+$data13+$data14+$data15+$data16;
         $data['activef1']=TRUE;
         $data['active3']=TRUE;
         $data['active12']=TRUE;
@@ -225,7 +375,24 @@
             return $array_records;
         }
     }
-    function show_sold(){
+    function show_amount(){
+        $result1=  $this->db->select_sum('purchased_amount')->from('tb_petrol')->get();
+        if($result1->num_rows()>0){
+            foreach ($result1->result() as $row){
+                    $array_records=array(
+                        'purchased_amount'=>$row->purchased_amount
+                    );
+            }
+            unset($row);
+            return $array_records;
+        }  else {
+            $array_records=array(
+                'purchased_amount'=>'No cash of Petrol found'
+            );
+            return $array_records;
+        }
+    }
+       function show_sold(){
         $res=  $this->db->select_sum('sold_litre')->from('tb_petrol')->get();
         if($res->num_rows()===1){
             foreach ($res->result() as $ro){
@@ -239,7 +406,230 @@
             $array=array(
             'sold_litres'=>'No customer'
         );
+             return $array;
         }
     }
+    function show_sold_amount(){
+        $res1=  $this->db->select_sum('sold_amount')->from('tb_petrol')->get();
+        if($res1->num_rows()===1){
+            foreach ($res1->result() as $ro){
+                $array=array(
+                    'sold_amount'=>$ro->sold_amount
+                );
+            }
+            unset($ro);
+            return $array;
+        }else{
+            $array=array(
+            'sold_amount'=>'No customer'
+        );
+        return $array;
+    }
  }
+ function diesel_show(){
+   $result=  $this->db->select_sum('Litre_diesel')->from('tb_diesel')->get();
+        if($result->num_rows()>0){
+            foreach ($result->result() as $row){
+                    $array_records=array(
+                        'number_litre1'=>$row->Litre_diesel
+                    );
+            }
+            unset($row);
+            return $array_records;
+        }  else {
+            $array_records=array(
+                'number_litre1'=>'No litres of diesel found'
+            );
+            return $array_records;
+        }  
+ }
+ function diesel_sold(){
+     $res=  $this->db->select_sum('sold_litre')->from('tb_diesel')->get();
+        if($res->num_rows()===1){
+            foreach ($res->result() as $ro){
+                $array=array(
+                    'sold_litres1'=>$ro->sold_litre
+                );
+            }
+            unset($ro);
+            return $array;
+        }else{
+            $array=array(
+            'sold_litres1'=>'No customer'
+        );
+        return $array;
+        }
+ }
+ function diesel_amount(){
+     $result1=  $this->db->select_sum('purchased_amount')->from('tb_diesel')->get();
+        if($result1->num_rows()>0){
+            foreach ($result1->result() as $row){
+                    $array_records=array(
+                        'purchased_amount1'=>$row->purchased_amount
+                    );
+            }
+            unset($row);
+            return $array_records;
+        }  else {
+            $array_records=array(
+                'purchased_amount1'=>'No cash of diesel found'
+            );
+            return $array_records;
+        }
+ }
+ function diesel_sold_amount(){
+     $res1=  $this->db->select_sum('sold_amount')->from('tb_diesel')->get();
+        if($res1->num_rows()===1){
+            foreach ($res1->result() as $ro){
+                $array=array(
+                    'sold_amount1'=>$ro->sold_amount
+                );
+            }
+            unset($ro);
+            return $array;
+        }else{
+            $array=array(
+            'sold_amount1'=>'No customer'
+        );
+            return $array;
+    }
+ }
+ function kerosine_show(){
+   $result=  $this->db->select_sum('Litre_kerosine')->from('tb_kerosine')->get();
+        if($result->num_rows()>0){
+            foreach ($result->result() as $row){
+                    $array_records=array(
+                        'number_litre2'=>$row->Litre_kerosine
+                    );
+            }
+            unset($row);
+            return $array_records;
+        }  else {
+            $array_records=array(
+                'number_litre2'=>'No litres of kerosine found'
+            );
+            return $array_records;
+        }  
+ }
+ function kerosine_sold(){
+     $res=  $this->db->select_sum('sold_litre')->from('tb_kerosine')->get();
+        if($res->num_rows()===1){
+            foreach ($res->result() as $ro){
+                $array=array(
+                    'sold_litres2'=>$ro->sold_litre
+                );
+            }
+            unset($ro);
+            return $array;
+        }else{
+            $array=array(
+            'sold_litres2'=>'No customer'
+        );
+        return $array;
+        }
+ }
+ function kerosine_amount(){
+     $result1=  $this->db->select_sum('purchased_amount')->from('tb_kerosine')->get();
+        if($result1->num_rows()>0){
+            foreach ($result1->result() as $row){
+                    $array_records=array(
+                        'purchased_amount2'=>$row->purchased_amount
+                    );
+            }
+            unset($row);
+            return $array_records;
+        }  else {
+            $array_records=array(
+                'purchased_amount2'=>'No cash of kerosine found'
+            );
+            return $array_records;
+        }
+ }
+ function kerosine_sold_amount(){
+     $res1=  $this->db->select_sum('sold_amount')->from('tb_kerosine')->get();
+        if($res1->num_rows()===1){
+            foreach ($res1->result() as $ro){
+                $array=array(
+                    'sold_amount2'=>$ro->sold_amount
+                );
+            }
+            unset($ro);
+            return $array;
+        }else{
+            $array=array(
+            'sold_amount2'=>'No customer'
+        );
+        return $array;
+    }
+ }
+ function oil_show(){
+   $result=  $this->db->select_sum('Litre_oil')->from('tb_oil')->get();
+        if($result->num_rows()>0){
+            foreach ($result->result() as $row){
+                    $array_records=array(
+                        'number_litre3'=>$row->Litre_oil
+                    );
+            }
+            unset($row);
+            return $array_records;
+        }  else {
+            $array_records=array(
+                'number_litre3'=>'No litres of diesel found'
+            );
+            return $array_records;
+        }  
+ }
+ function oil_sold(){
+     $res=  $this->db->select_sum('sold_litre')->from('tb_oil')->get();
+        if($res->num_rows()===1){
+            foreach ($res->result() as $ro){
+                $array=array(
+                    'sold_litres3'=>$ro->sold_litre
+                );
+            }
+            unset($ro);
+            return $array;
+        }else{
+            $array=array(
+            'sold_litres3'=>'No customer'
+        );
+        return $array;
+        }
+ }
+ function oil_amount(){
+     $result1=  $this->db->select_sum('purchased_amount')->from('tb_oil')->get();
+        if($result1->num_rows()>0){
+            foreach ($result1->result() as $row){
+                    $array_records=array(
+                        'purchased_amount3'=>$row->purchased_amount
+                    );
+            }
+            unset($row);
+            return $array_records;
+        }  else {
+            $array_records=array(
+                'purchased_amount3'=>'No cash of diesel found'
+            );
+            return $array_records;
+        }
+ }
+ function oil_sold_amount(){
+     $res1=  $this->db->select_sum('sold_amount')->from('tb_oil')->get();
+        if($res1->num_rows()===1){
+            foreach ($res1->result() as $ro){
+                $array=array(
+                    'sold_amount3'=>$ro->sold_amount
+                );
+            }
+            unset($ro);
+            return $array;
+        }else{
+            $array=array(
+            'sold_amount3'=>'No customer'
+        );
+        return $array;
+    }
+ }
+
+}
 

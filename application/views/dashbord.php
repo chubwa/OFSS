@@ -8,22 +8,44 @@
         </ul>
         <div class="tab-content" style="display: block" id="myTabContent">
             <div class="in tab-pane <?php if(isset($activef)){ echo 'active';}?>" id="feeds">
-                <label class="text text-info text-justify">PETROL</label>
-            <table class="table table-striped table-condensed">
-                <tr><td>Litres of Petrol(L)</td><td><span class="badge"><?php echo ''.$number_litre-$sold_litres;?></span></td><td>COST($ or TSH)</td><td><span></span></td></tr>
-                </table>
-                <label class="text text-info text-justify">DIESEL</label>
-                <table class="table table-striped table-condensed">
-                <tr><td>Litres of Diesel(L)</td><td><input type="text" name="dtl" class="form-control"></td><td>COST($ or TSH)</td><td><input type="text" name="dst" class="form-control"></td></tr>
-                </table>
-                <label class="text text-info text-justify">KEROSINE</label>
-                <table class="table table-striped table-condensed">
-                <tr><td>Litres of Kerosine(L)</td><td><input type="text" name="ktl" class="form-control"></td><td>COST($ or TSH)</td><td><input type="text" name="kst" class="form-control"></td></tr>
-                </table>
-                <label class="text text-info text-justify">OIL</label>
-                <table class="table table-striped table-condensed">
-                <tr><td>Litres of Oil(L)</td><td><input type="text" name="otl" class="form-control"></td><td>COST($ or TSH)</td><td><input type="text" name="kst" class="form-control"></td></tr>
-                </table>
+                <ul class="list-group">
+                   <li class="list-group-item-heading text-info">For Petrol</li>
+                    <li class="list-group-item">
+                        <span class="badge"><?php echo ''.$number_litre-$sold_litres;?> Litres</span>
+                    Remained Litres of petrol
+                    </li>
+                    <li class="list-group-item">
+                        <span class="badge"><?php echo ''.$purchased_amount;?> TSHS</span>
+                    Purchased amount
+                    </li>
+                   <li class="list-group-item-heading text-info">For diesel    </li>
+                   <li class="list-group-item">
+                        <span class="badge"><?php echo ''.$number_litre1-$sold_litres1;?> Litres</span>
+                    Remained Litres of diesel
+                    </li>
+                    <li class="list-group-item">
+                        <span class="badge"><?php echo ''.$purchased_amount1;?> TSHS</span>
+                    Purchased amount
+                    </li>
+                    <li class="list-group-item-heading text-info">For Kerosine    </li>
+                   <li class="list-group-item">
+                        <span class="badge"><?php echo ''.$number_litre2-$sold_litres2;?> Litres</span>
+                    Remained Litres of kerosine
+                    </li>
+                    <li class="list-group-item">
+                        <span class="badge"><?php echo ''.$purchased_amount2;?> TSHS</span>
+                    Purchased amount
+                    </li>
+                    <li class="list-group-item-heading text-info">For  Oil</li>
+                   <li class="list-group-item">
+                        <span class="badge"><?php echo ''.$number_litre3-$sold_litres3;?> Litres</span>
+                    Remained Litres of diesel
+                    </li>
+                    <li class="list-group-item">
+                        <span class="badge"><?php echo ''.$purchased_amount3;?> TSHS</span>
+                    Purchased amount
+                    </li>
+                </ul>
                
         </div>
             <div class="in tab-pane fade <?php if(isset($activef1)){ echo 'active';}?>" id="resource">
