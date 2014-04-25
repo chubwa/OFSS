@@ -13,8 +13,10 @@
          }else{
          $username=  $this->input->post('us');
          $password=  md5($this->input->post('pd'));
-         $res=  $this->db->get_where('tb_user',array('email'=>$username,'password'=>$password),1);
-         $res2=  $this->db->get_where('tb_user',array('username'=>$username,'password'=>$password),1);
+         $res=  $this->db->get_where('tb_user',array('email'=>$username,'password'=>$password,'status'=>'active'),1);
+         $res2=  $this->db->get_where('tb_user',array('username'=>$username,'password'=>$password,'status'=>'active'),1);
+         $res3=  $this->db->get_where('tb_user',array('email'=>$username,'password'=>$password,'status'=>'diactive'),1);
+         $res4=  $this->db->get_where('tb_user',array('username'=>$username,'password'=>$password,'status'=>'diactive'),1);
          $row=$res->row();
          if($res->num_rows()===1){
            $sess_data=array(
@@ -33,8 +35,27 @@
               );
               $this->session->set_userdata($sess_data);
               $this->dashbord($username);
-              
-         } else {
+          }elseif($res3->num_rows()===1){
+             $row3=$res3->row();
+              $sess_data=array(
+                  'username'=>$username,
+                  'email'=>$row3->email,
+                  'logged_in'=>TRUE
+              );
+              $this->session->set_userdata($sess_data);
+              $data['info']='<p class="text text-danger">Dear '.' '.$username.' your account has been diactivated plz click help for information</p>';
+              $this->load->view('home',$data);
+         }elseif($res4->num_rows()===1){
+             $row4=$res4->row();
+              $sess_data=array(
+                  'username'=>$row4->username,
+                  'email'=>$username,
+                  'logged_in'=>TRUE
+              );
+              $this->session->set_userdata($sess_data);
+              $data['info1']='<p  class="text text-danger">Dear '.' '.$this->session->userdata('username').' your account has been diactivated plz click help for information</p>';
+              $this->load->view('home',$data);
+         }else {
                $data['records']='<font color="red">The compination of username or Email and password does not match</font>';
                $this->load->view('home',$data);
             }

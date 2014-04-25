@@ -1,10 +1,10 @@
 .page-above{
-    height: 7%;
+    height: 1%;
     border-bottom: 1px solid #ccc;
     
 }
 .page1-above{
-  height: 15%;
+  height: 3%;
   border-bottom: 1px solid #ccc; 
 }
 #content{
@@ -19,8 +19,8 @@
     margin-left: 170px;
     margin-right: 170px;
     height: 70%;
-    border-left: 1px solid #ccc;
-    border-right: 1px solid #ccc;
+    border-left: 0px solid #ccc;
+    border-right: 0px solid #ccc;
 }
 .cst{
     padding-top: 50px;

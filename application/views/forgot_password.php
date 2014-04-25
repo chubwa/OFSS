@@ -1,12 +1,12 @@
 <?php include_once 'header.php';?>
 <div id="content1">
-    <div class="col-lg-9">
+    <div class="col-lg-10">
         <div class="cst">
-            <div class="panel panel-primary " style="margin-left: 200px;">
+            <div class="panel panel-primary " style="margin-left: 250px;">
             <div class="panel-heading"><label>Forgot password</label></div>
             <div class="well-sm">
             <?php echo form_open('register_controller/forgot_password',array('class'=>'form-horizontal'));?>
-                <label class="label-info">Please enter your Email or username to retrieve password*</label>
+                <label class=" label label-info">Please enter your Email or username to retrieve password*</label>
             <div class="control-group">
                 <label class="control-label" for="InputEmail"><b>Email or Username</b></label>
                 <div class="controls">
@@ -23,7 +23,7 @@
              </div>
              </div>
             <?php echo form_close();?>
-            <ul class="nav nav-pills" style="margin-left: 100px;">
+            <ul class="nav nav-pills" style="margin-left: 250px;">
                 <li><a href="<?php echo site_url('login');?>">
                         Login<span class="badge"></span>
                    </a></li>

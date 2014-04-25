@@ -29,6 +29,8 @@
          $data16=  $this->oil_sold_amount();
          $data=$data1+$data2+$data3+$data4+$data5+$data6+$data7+$data8+$data9+$data10+$data11+$data12+$data13+$data14+$data15+$data16;
          $data['activef']=TRUE;
+         $data['active']=TRUE;
+         $data['active5']=TRUE;
          $this->load->view('dashbord',$data);
      }
     function petrol(){
@@ -49,10 +51,10 @@
          $data15=  $this->oil_sold();
          $data16=  $this->oil_sold_amount();
          $data=$data1+$data2+$data3+$data4+$data5+$data6+$data7+$data8+$data9+$data10+$data11+$data12+$data13+$data14+$data15+$data16;
-        $data['activef1']=TRUE;
+        $data['activef']=TRUE;
         $data['active']=TRUE;
         $data['active5']=TRUE;
-        unset($data['activef']);
+        unset($data['activef1']);
         $this->form_validation->set_rules('nlitre','Sold Litres','trim|required|numeric|xss_clean');
         $this->form_validation->set_rules('cost','Sold Amount','trim|required|alpha_numeric|xss_clean');
         $this->form_validation->set_rules('issue','Sold date','trim|required|xss_clean');
@@ -87,7 +89,7 @@
          $data15=  $this->oil_sold();
          $data16=  $this->oil_sold_amount();
          $data=$data1+$data2+$data3+$data4+$data5+$data6+$data7+$data8+$data9+$data10+$data11+$data12+$data13+$data14+$data15+$data16;
-        $data['activef1']=TRUE;
+        $data['activef']=TRUE;
         $data['active']=TRUE;
         $data['active6']=TRUE;
         unset($data['active5']);
@@ -127,10 +129,10 @@
          $data15=  $this->oil_sold();
          $data16=  $this->oil_sold_amount();
          $data=$data1+$data2+$data3+$data4+$data5+$data6+$data7+$data8+$data9+$data10+$data11+$data12+$data13+$data14+$data15+$data16;
-        $data['activef1']=TRUE;
+        $data['activef']=TRUE;
         $data['active1']=TRUE;
         $data['active7']=TRUE;
-        unset($data['activef']);
+        unset($data['activef1']);
         unset($data['active']);
         $this->form_validation->set_rules('nlitre2','Sold Litres','trim|required|numeric|xss_clean');
         $this->form_validation->set_rules('cost2','Sold Amount','trim|required|alpha_numeric|xss_clean');
@@ -166,12 +168,12 @@
          $data15=  $this->oil_sold();
          $data16=  $this->oil_sold_amount();
          $data=$data1+$data2+$data3+$data4+$data5+$data6+$data7+$data8+$data9+$data10+$data11+$data12+$data13+$data14+$data15+$data16;
-        $data['activef1']=TRUE;
+        $data['activef']=TRUE;
         $data['active1']=TRUE;
         $data['active8']=TRUE;
         unset($data['active7']);
         unset($data['active']);
-        unset($data['activef']);
+        unset($data['activef1']);
         $this->form_validation->set_rules('nlitre3','Sold Litres','trim|required|numeric|xss_clean');
         $this->form_validation->set_rules('cost3','Sold Amount','trim|required|alpha_numeric|xss_clean');
         $this->form_validation->set_rules('ncost3','Customer name','trim|required|xss_clean');
@@ -208,10 +210,10 @@
          $data15=  $this->oil_sold();
          $data16=  $this->oil_sold_amount();
          $data=$data1+$data2+$data3+$data4+$data5+$data6+$data7+$data8+$data9+$data10+$data11+$data12+$data13+$data14+$data15+$data16;
-        $data['activef1']=TRUE;
+        $data['activef']=TRUE;
         $data['active2']=TRUE;
         $data['active9']=TRUE;
-        unset($data['activef']);
+        unset($data['activef1']);
         unset($data['active1']);
         unset($data['active']);
         $this->form_validation->set_rules('nlitre4','Sold Litres','trim|required|numeric|xss_clean');
@@ -248,10 +250,10 @@
          $data15=  $this->oil_sold();
          $data16=  $this->oil_sold_amount();
          $data=$data1+$data2+$data3+$data4+$data5+$data6+$data7+$data8+$data9+$data10+$data11+$data12+$data13+$data14+$data15+$data16;
-        $data['activef1']=TRUE;
+        $data['activef']=TRUE;
         $data['active10']=TRUE;
         $data['active2']=TRUE;
-        unset($data['activef']);
+        unset($data['activef1']);
         unset($data['active9']);
         unset($data['active1']);
         unset($data['active']);
@@ -292,12 +294,12 @@
          $data16=  $this->oil_sold_amount();
          $data=$data1+$data2+$data3+$data4+$data5+$data6+$data7+$data8+$data9+$data10+$data11+$data12+$data13+$data14+$data15+$data16;
         $data['active3']=TRUE;
-        $data['activef1']=TRUE;
+        $data['activef']=TRUE;
         $data['active11']=TRUE;
         unset($data['active2']);
         unset($data['active1']);
         unset($data['active']);
-        unset($data['activef']);
+        unset($data['activef1']);
         $this->form_validation->set_rules('nlitre6','Sold Litres','trim|required|numeric|xss_clean');
         $this->form_validation->set_rules('cost6','Sold Amount','trim|required|alpha_numeric|xss_clean');
         $this->form_validation->set_rules('issue6','Sold date','trim|required|xss_clean');
@@ -332,14 +334,14 @@
         $data15=  $this->oil_sold();
         $data16=  $this->oil_sold_amount();
         $data=$data1+$data2+$data3+$data4+$data5+$data6+$data7+$data8+$data9+$data10+$data11+$data12+$data13+$data14+$data15+$data16;
-        $data['activef1']=TRUE;
+        $data['activef']=TRUE;
         $data['active3']=TRUE;
         $data['active12']=TRUE;
         unset($data['active11']);
         unset($data['active2']);
         unset($data['active1']);
         unset($data['active']);
-        unset($data['activef']);
+        unset($data['activef1']);
         $this->form_validation->set_rules('nlitre7','Sold Litres','trim|required|numeric|xss_clean');
         $this->form_validation->set_rules('cost7','Sold Amount','trim|required|alpha_numeric|xss_clean');
         $this->form_validation->set_rules('ncost7','Customer name','trim|required|xss_clean');

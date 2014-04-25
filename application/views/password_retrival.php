@@ -2,7 +2,7 @@
 <div id="content1">
     <div class="col-lg-10">
         <div class="cst">
-            <div class="panel panel-primary " style="margin-left: 200px;">
+            <div class="panel panel-primary " style="margin-left: 250px;">
             <div class="panel-heading"><label>Update password</label></div>
             <div class="well-sm">
                 <div id="load"><?php if(!empty($data1)){ echo $data1;}?></div>
@@ -36,7 +36,7 @@
             <?php echo form_close();?>
             </div>
             <div class="text text-center">
-            <ul class="nav nav-pills">
+            <ul class="nav nav-pills" style="margin-left: 250px;">
                 <li><a href="<?php echo site_url('login');?>">
                         Login<span class="badge"></span>
                    </a></li>

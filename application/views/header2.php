@@ -31,13 +31,12 @@
                         </li>
                         <li><a href="#">Contacts</a></li>
                         <li><div class="btn-group">
-                                <a class="btn btn-primary" href="#"><i><?php echo $this->session->userdata('username');?></i></a>
-                                <a class="btn btn-primary dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
+                                <a class="btn btn-info" href="#"><img src="<?php echo base_url('img/13.png');?>"><i><?php echo $this->session->userdata('username');?></i></a>
+                                <a class="btn btn-info dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="#" >Edit</a></li>
-                                    <li><a href="<?php echo site_url('logout');?>" >Logout</a></li>
+                                    <li><a href="#" >Profile</a></li>
+                                    <li><a href="#">Edit</a></li>
                                     <li><a href="#" >Setting</a></li>
-                                    <li><a></a></li>
                                 </ul>
                             </div></li>
                     </ul>
@@ -45,15 +44,6 @@
             </div>
         </header>
         <div class="page-above">
-            <div class="btn-group dropdown" id="content">
-                <button class="btn btn-default dropdown-toggle" data-toggle="dropdown"><?php echo $this->session->userdata('username');?>
-                    <span class="caret"></span></button>
-                <ul class="dropdown-menu">
-                <li><a href="#"><i></i> Profile</a></li>
-                <li><a href="#"><i></i> Inbox <span class="badge">7</span></a></li>
-                <li><a href="#"><i></i> Settings</a></li>
-                </ul>
-            </div>
         </div>
         
 
