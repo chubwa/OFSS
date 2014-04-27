@@ -46,7 +46,7 @@
                      </a>
                    </li>
                    <li><a href="<?php echo site_url('');?>">
-                        Help<span class="badge">0</span>
+                        Help<span class="badge"></span>
                      </a>
                    </li>
             </ul>

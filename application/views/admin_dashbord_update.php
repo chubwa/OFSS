@@ -31,7 +31,7 @@
                         <span class="badge">0</span>
                         Balance in Litres
                     </a>
-                     <a href="#" class="list-group-item">
+                <a href="<?php echo site_url('admin_controller/user');?>" class="list-group-item">
                         View user's 
                     
                     </a>
@@ -49,18 +49,16 @@
             
        </div>
         </div>
-        <div class="col-lg-7" id="dt">
+        <div class="col-lg-6" id="dt">
             <div class="panel-primary dt1">
                 <div class="panel-heading"><label>Update user account</label></div>
-                <div class="well bs-component">
-                    <?php if(!empty($smg)){echo'<label class="label-success" style="margin-left:50px;">'. $smg.'</label>';}?>
-                    <?php echo form_open('');?>
+                <div class="well">
+                    <?php echo form_open('',array('class'=>'form-horizontal'));?>
                     <div class="form-group">
                         <label for="firstname" class="col-lg-4 control-label">First name</label>
                         <div class="col-lg-8">
                             <table class="table table-condensed table-responsive"><tr><td><?php echo ''.$firstname;?></td></tr></table>
                         </div>
-                    </div>
                     <div class="form-group">
                         <label for="secondname" class="col-lg-4 control-label">Second name</label>
                         <div class="col-lg-8">
@@ -89,22 +87,22 @@
                                 <tr><td><input type="text" name="edit" class="form-control input-sm"></td><td>
                                                 <input type="submit" class="btn btn-primary" value="EDIT">
                                                 <?php echo form_close();?></td></tr></table>
-                        </div>
-                    </div>
-                    
-                    <?php echo form_close();?>
+                                     </div>
+                                     </div>
                 </div>
             </div>
+            <div class="load"></div>
         </div>
-        <script>
-$(document).ready(function(){
+        </div>
+        </div>
+        
+   <script>
+   $(document).ready(function(){
    $('#sct').hide();
    $('.menu').click(function(){
    $('#sct').show();
     });
    });
 </script>
-</div>
-</div>
 <?php include_once 'footer.php';?>
 

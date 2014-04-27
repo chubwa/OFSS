@@ -210,12 +210,21 @@
                 <a href="<?php echo site_url('general_setup/change');?>" class="list-group-item">
                         Change password
                     </a>
-                    <a href="#" class="list-group-item">
-                        <img src="<?php echo base_url('img/74.png');?>"> <span class="badge">0</span>
-                        Bissness notification
+                <a href="<?php echo site_url('dashbord/count');?>" class="list-group-item">
+                        <span class="badge">
+                        <?php
+                        $res1=$this->db->get_where('tb_problem',array('receiver'=>'seller','status'=>'unchecked'));
+                        if($res1->num_rows()>0){
+                            echo'<blink>'. $this->db->count_all_results().'</blink>';
+                         } else {
+                            echo '0'; 
+                         }
+                            ?>
+                        </span>
+                        System notification
                     </a>
-                    <a href="#" class="list-group-item">
-                        <span class="badge">0</span>
+                <a href="<?php echo site_url('dashbord/view');?>" class="list-group-item">
+                        <span class="badge"></span>
                         Balance in Litres
                     </a>
                     <a href="#" class="list-group-item">

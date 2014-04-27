@@ -14,12 +14,21 @@
                         Report problem
                     </a>
                      
-                    <a href="#" class="list-group-item">
-                        <span class="badge">0</span>
-                        System alerts
+                    <a href="<?php echo site_url('dashbord/count');?>" class="list-group-item">
+                        <span class="badge">
+                            <?php
+                        $res1=$this->db->get_where('tb_problem',array('receiver'=>'seller','status'=>'unchecked'));
+                        if($res1->num_rows()>0){
+                            echo'<blink>'. $this->db->count_all_results().'</blink>';
+                        }  else {
+                            echo '0'; 
+                         }
+                            ?>
+                        </span>
+                        System notification
                     </a>
-                    <a href="#" class="list-group-item">
-                        <span class="badge">0</span>
+                    <a href="<?php echo site_url('dashbord/view');?>" class="list-group-item">
+                        <span class="badge">view</span>
                         Balance in Litres
                     </a>
                      <a href="<?php echo site_url('logout');?>" class="list-group-item" >

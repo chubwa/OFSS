@@ -99,4 +99,13 @@
               $this->db->insert('tb_oil',$data_entry); 
           }
       }
+      public function reporter($sender,$problem,$receiver){
+             $array_prob=array(
+                 'reporter'=>$sender,
+                 'problem'=>$problem,
+                 'receiver'=>$receiver
+             );
+             $res=  $this->db->insert('tb_problem',$array_prob);
+             return $res;
+      }
   }

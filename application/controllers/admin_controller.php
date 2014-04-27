@@ -11,12 +11,56 @@
         }
      }
      function index(){
+         $data1=  $this->alert();
+         $data2=  $this->alert1();
+         $data3=  $this->alert2();
+         $data4=  $this->alert3();
+         $data5=  $this->alert4();
+         $data6=  $this->alert5();
+         $data7=  $this->alert6();
+         $data8=  $this->alert7();
+         $data9=  $this->show();
+         $data10=  $this->show1();
+         $data11=  $this->show2();
+         $data12=  $this->show3();
+         $data13=  $this->alert8();
+         $data14=  $this->alert9();
+         $data15=  $this->alert10();
+         $data16=  $this->alert11();
+         $data17=  $this->alert12();
+         $data18=  $this->alert13();
+         $data19=  $this->alert14();
+         $data20=  $this->alert15();
+         $data=$data1+$data2+$data3+$data4+$data5+$data6+$data7+$data8+$data9+$data10+$data11+$data12
+                 +$data13+$data14+$data15+$data16+$data17+$data18+$data19+$data20;
          $data['results']=  $this->member();
          $data['activef']=TRUE;
          $data['active']=TRUE;
          $this->load->view('admin_dashbord',$data);
      }
      public function petrol(){
+         $data1=  $this->alert();
+         $data2=  $this->alert1();
+         $data3=  $this->alert2();
+         $data4=  $this->alert3();
+         $data5=  $this->alert4();
+         $data6=  $this->alert5();
+         $data7=  $this->alert6();
+         $data8=  $this->alert7();
+         $data9=  $this->show();
+         $data10=  $this->show1();
+         $data11=  $this->show2();
+         $data12=  $this->show3();
+         $data13=  $this->alert8();
+         $data14=  $this->alert9();
+         $data15=  $this->alert10();
+         $data16=  $this->alert11();
+         $data17=  $this->alert12();
+         $data18=  $this->alert13();
+         $data19=  $this->alert14();
+         $data20=  $this->alert15();
+         $data=$data1+$data2+$data3+$data4+$data5+$data6+$data7+$data8+$data9+$data10+$data11+$data12
+                 +$data13+$data14+$data15+$data16+$data17+$data18+$data19+$data20;
          $data['results']=  $this->member();
          $data['activef']=TRUE;
          $data['active']=TRUE;
@@ -40,8 +84,31 @@
          
          }
          public function diesel(){
+         $data1=  $this->alert();
+         $data2=  $this->alert1();
+         $data3=  $this->alert2();
+         $data4=  $this->alert3();
+         $data5=  $this->alert4();
+         $data6=  $this->alert5();
+         $data7=  $this->alert6();
+         $data8=  $this->alert7();
+         $data9=  $this->show();
+         $data10=  $this->show1();
+         $data11=  $this->show2();
+         $data12=  $this->show3();
+         $data13=  $this->alert8();
+         $data14=  $this->alert9();
+         $data15=  $this->alert10();
+         $data16=  $this->alert11();
+         $data17=  $this->alert12();
+         $data18=  $this->alert13();
+         $data19=  $this->alert14();
+         $data20=  $this->alert15();
+         $data=$data1+$data2+$data3+$data4+$data5+$data6+$data7+$data8+$data9+$data10+$data11+$data12
+                 +$data13+$data14+$data15+$data16+$data17+$data18+$data19+$data20;
              $data['results']=  $this->member();
              $data['active1']=TRUE;
+             $data['activef']=TRUE;
              unset($data['active']);
          $this->form_validation->set_rules('nl1','Number of Litres','trim|required|numeric|xss_clean');
          $this->form_validation->set_rules('amnt1','Amount Purchased','trim|required|alpha_numeric|xss_clean');
@@ -62,6 +129,28 @@
          }
      }
      function kerosine(){
+         $data1=  $this->alert();
+         $data2=  $this->alert1();
+         $data3=  $this->alert2();
+         $data4=  $this->alert3();
+         $data5=  $this->alert4();
+         $data6=  $this->alert5();
+         $data7=  $this->alert6();
+         $data8=  $this->alert7();
+         $data9=  $this->show();
+         $data10=  $this->show1();
+         $data11=  $this->show2();
+         $data12=  $this->show3();
+         $data13=  $this->alert8();
+         $data14=  $this->alert9();
+         $data15=  $this->alert10();
+         $data16=  $this->alert11();
+         $data17=  $this->alert12();
+         $data18=  $this->alert13();
+         $data19=  $this->alert14();
+         $data20=  $this->alert15();
+         $data=$data1+$data2+$data3+$data4+$data5+$data6+$data7+$data8+$data9+$data10+$data11+$data12
+                 +$data13+$data14+$data15+$data16+$data17+$data18+$data19+$data20;
          $data['results']=  $this->member();
          $data['activef']=TRUE;
          $data['active2']=TRUE;
@@ -85,6 +174,28 @@
          }
      }
      function oil(){
+         $data1=  $this->alert();
+         $data2=  $this->alert1();
+         $data3=  $this->alert2();
+         $data4=  $this->alert3();
+         $data5=  $this->alert4();
+         $data6=  $this->alert5();
+         $data7=  $this->alert6();
+         $data8=  $this->alert7();
+         $data9=  $this->show();
+         $data10=  $this->show1();
+         $data11=  $this->show2();
+         $data12=  $this->show3();
+         $data13=  $this->alert8();
+         $data14=  $this->alert9();
+         $data15=  $this->alert10();
+         $data16=  $this->alert11();
+         $data17=  $this->alert12();
+         $data18=  $this->alert13();
+         $data19=  $this->alert14();
+         $data20=  $this->alert15();
+         $data=$data1+$data2+$data3+$data4+$data5+$data6+$data7+$data8+$data9+$data10+$data11+$data12
+                 +$data13+$data14+$data15+$data16+$data17+$data18+$data19+$data20;
          $data['results']=  $this->member();
          $data['activef']=TRUE;
          $data['active3']=TRUE;
@@ -159,6 +270,341 @@
             $this->load->view('admin_dashbord',$data);
          }  else {
              return FALSE;
+         }
+     }
+     function user(){
+       $data['results']=  $this->member();
+       $data['activef2']=TRUE;
+       $this->load->view('admin_dashbord',$data);
+     }
+     public function alert(){
+         $res=  $this->db->select_sum('Litre_petrol')->from('tb_petrol')->get();
+         if($res->num_rows()>0){
+             foreach ($res->result() as $row){
+                 $array=array(
+                     'Litre_petrol'=>$row->Litre_petrol
+                 );
+             }
+             unset($row);
+             return $array;
+         }
+     }
+     public function alert1() {
+       $res1=  $this->db->select_sum('sold_litre')->from('tb_petrol')->get();
+       if($res1->num_rows()>0){
+           foreach ($res1->result() as $row){
+               $array=array(
+                   'sold_litre'=>$row->sold_litre
+               );
+           }
+           unset($row);
+           return $array;
+       }
+     }
+      public function alert2(){
+         $res=  $this->db->select_sum('Litre_diesel')->from('tb_diesel')->get();
+         if($res->num_rows()>0){
+             foreach ($res->result() as $row){
+                 $array=array(
+                     'Litre_diesel'=>$row->Litre_diesel
+                 );
+             }
+             unset($row);
+             return $array;
+         }
+     }
+     public function alert3() {
+       $res1=  $this->db->select_sum('sold_litre')->from('tb_diesel')->get();
+       if($res1->num_rows()>0){
+           foreach ($res1->result() as $row){
+               $array=array(
+                   'sold_litre1'=>$row->sold_litre
+               );
+           }
+           unset($row);
+           return $array;
+       }
+     }
+      public function alert4(){
+         $res=  $this->db->select_sum('Litre_kerosine')->from('tb_kerosine')->get();
+         if($res->num_rows()>0){
+             foreach ($res->result() as $row){
+                 $array=array(
+                     'Litre_kerosine'=>$row->Litre_kerosine
+                 );
+             }
+             unset($row);
+             return $array;
+         }
+     }
+     public function alert5() {
+       $res1=  $this->db->select_sum('sold_litre')->from('tb_kerosine')->get();
+       if($res1->num_rows()>0){
+           foreach ($res1->result() as $row){
+               $array=array(
+                   'sold_litre2'=>$row->sold_litre
+               );
+           }
+           unset($row);
+           return $array;
+       }
+     }
+      public function alert6(){
+         $res=  $this->db->select_sum('Litre_oil')->from('tb_oil')->get();
+         if($res->num_rows()>0){
+             foreach ($res->result() as $row){
+                 $array=array(
+                     'Litre_oil'=>$row->Litre_oil
+                 );
+             }
+             unset($row);
+             return $array;
+         }
+     }
+     public function alert7() {
+       $res1=  $this->db->select_sum('sold_litre')->from('tb_petrol')->get();
+       if($res1->num_rows()>0){
+           foreach ($res1->result() as $row){
+               $array=array(
+                   'sold_litre3'=>$row->sold_litre
+               );
+           }
+           unset($row);
+           return $array;
+       }
+     }
+       public function alert8() {
+       $res1=  $this->db->select_sum('expected_amount')->from('tb_petrol')->get();
+       if($res1->num_rows()>0){
+           foreach ($res1->result() as $row){
+               $array=array(
+                   'expected_amount'=>$row->expected_amount
+               );
+           }
+           unset($row);
+           return $array;
+       }
+       }
+       public function alert9() {
+       $res1=  $this->db->select_sum('expected_amount')->from('tb_kerosine')->get();
+       if($res1->num_rows()>0){
+           foreach ($res1->result() as $row){
+               $array=array(
+                   'expected_amount1'=>$row->expected_amount
+               );
+           }
+           unset($row);
+           return $array;
+       }
+       }
+       public function alert10() {
+       $res1=  $this->db->select_sum('expected_amount')->from('tb_diesel')->get();
+       if($res1->num_rows()>0){
+           foreach ($res1->result() as $row){
+               $array=array(
+                   'expected_amount2'=>$row->expected_amount
+               );
+           }
+           unset($row);
+           return $array;
+       }
+       }
+       public function alert11() {
+       $res1=  $this->db->select_sum('expected_amount')->from('tb_oil')->get();
+       if($res1->num_rows()>0){
+           foreach ($res1->result() as $row){
+               $array=array(
+                   'expected_amount3'=>$row->expected_amount
+               );
+           }
+           unset($row);
+           return $array;
+       }
+     }
+     public function alert12() {
+       $res1=  $this->db->select_sum('sold_amount')->from('tb_petrol')->get();
+       if($res1->num_rows()>0){
+           foreach ($res1->result() as $row){
+               $array=array(
+                   'sold_amount1'=>$row->sold_amount
+               );
+           }
+           unset($row);
+           return $array;
+       }
+       }
+       public function alert13() {
+       $res1=  $this->db->select_sum('sold_amount')->from('tb_kerosine')->get();
+       if($res1->num_rows()>0){
+           foreach ($res1->result() as $row){
+               $array=array(
+                   'sold_amount2'=>$row->sold_amount
+               );
+           }
+           unset($row);
+           return $array;
+       }
+       }
+       public function alert14() {
+       $res1=  $this->db->select_sum('sold_amount')->from('tb_diesel')->get();
+       if($res1->num_rows()>0){
+           foreach ($res1->result() as $row){
+               $array=array(
+                   'sold_amount3'=>$row->sold_amount
+               );
+           }
+           unset($row);
+           return $array;
+       }
+       }
+       public function alert15() {
+       $res1=  $this->db->select_sum('sold_amount')->from('tb_oil')->get();
+       if($res1->num_rows()>0){
+           foreach ($res1->result() as $row){
+               $array=array(
+                   'sold_amount4'=>$row->sold_amount
+               );
+           }
+           unset($row);
+           return $array;
+       }
+     }
+     public function summary(){
+         $data1=  $this->alert();
+         $data2=  $this->alert1();
+         $data3=  $this->alert2();
+         $data4=  $this->alert3();
+         $data5=  $this->alert4();
+         $data6=  $this->alert5();
+         $data7=  $this->alert6();
+         $data8=  $this->alert7();
+         $data9=  $this->show();
+         $data10=  $this->show1();
+         $data11=  $this->show2();
+         $data12=  $this->show3();
+         $data13=  $this->alert8();
+         $data14=  $this->alert9();
+         $data15=  $this->alert10();
+         $data16=  $this->alert11();
+         $data17=  $this->alert12();
+         $data18=  $this->alert13();
+         $data19=  $this->alert14();
+         $data20=  $this->alert15();
+         $data=$data1+$data2+$data3+$data4+$data5+$data6+$data7+$data8+$data9+$data10+$data11+$data12
+                 +$data13+$data14+$data15+$data16+$data17+$data18+$data19+$data20;
+         $this->load->view('alert_view',$data);    
+     }
+     function show(){
+         $res=  $this->db->get('tb_petrol');
+         if($res->num_rows()>0){
+             foreach ($res->result() as $row){
+                 $array=array(
+                     'Litre_petrol'=>$row->Litre_petrol,
+                     'purchased_amount'=>$row->purchased_amount,
+                     'admin_name'=>$row->admin_name,
+                     'Expected_amount'=>$row->expected_amount,
+                     'seller_name'=>$row->seller_name,
+                     'entray_date'=>$row->entray_date,
+                     'sold_litre'=>$row->sold_litre,
+                     'sold_amount'=>$row->sold_amount
+                 );
+             }
+             unset($row);
+             return $array;
+         }
+     }
+     function show1(){
+         $res=  $this->db->get('tb_diesel');
+         if($res->num_rows()>0){
+             foreach ($res->result() as $row){
+                 $array=array(
+                     'Litre_diesel'=>$row->Litre_diesel,
+                     'purchased_amount1'=>$row->purchased_amount,
+                     'admin_name1'=>$row->admin_name,
+                     'Expected_amount1'=>$row->expected_amount,
+                     'seller_name1'=>$row->seller_name,
+                     'entray_date1'=>$row->entray_date,
+                     'sold_litre1'=>$row->sold_litre,
+                     'sold_amount1'=>$row->sold_amount
+                 );
+             }
+             unset($row);
+             return $array;
+         }
+     }
+     function show2(){
+         $res=  $this->db->get('tb_kerosine');
+         if($res->num_rows()>0){
+             foreach ($res->result() as $row){
+                 $array=array(
+                     'Litre_kerosine'=>$row->Litre_kerosine,
+                     'purchased_amount2'=>$row->purchased_amount,
+                     'admin_name2'=>$row->admin_name,
+                     'Expected_amount2'=>$row->expected_amount,
+                     'seller_name2'=>$row->seller_name,
+                     'entray_date2'=>$row->entray_date,
+                     'sold_litre2'=>$row->sold_litre,
+                     'sold_amount2'=>$row->sold_amount
+                 );
+             }
+             unset($row);
+             return $array;
+         }
+     }
+     function show3(){
+         $res=  $this->db->get('tb_oil');
+         if($res->num_rows()>0){
+             foreach ($res->result() as $row){
+                 $array=array(
+                     'Litre_oil'=>$row->Litre_oil,
+                     'purchased_amount3'=>$row->purchased_amount,
+                     'admin_name3'=>$row->admin_name,
+                     'Expected_amount3'=>$row->expected_amount,
+                     'seller_name3'=>$row->seller_name,
+                     'entray_date3'=>$row->entray_date,
+                     'sold_litre3'=>$row->sold_litre,
+                     'sold_amount3'=>$row->sold_amount
+                 );
+             }
+             unset($row);
+             return $array;
+         }
+     }
+     public function problem(){
+         $data1=  $this->alert();
+         $data2=  $this->alert1();
+         $data3=  $this->alert2();
+         $data4=  $this->alert3();
+         $data5=  $this->alert4();
+         $data6=  $this->alert5();
+         $data7=  $this->alert6();
+         $data8=  $this->alert7();
+         $data9=  $this->show();
+         $data10=  $this->show1();
+         $data11=  $this->show2();
+         $data12=  $this->show3();
+         $data13=  $this->alert8();
+         $data14=  $this->alert9();
+         $data15=  $this->alert10();
+         $data16=  $this->alert11();
+         $data17=  $this->alert12();
+         $data18=  $this->alert13();
+         $data19=  $this->alert14();
+         $data20=  $this->alert15();
+         $data=$data1+$data2+$data3+$data4+$data5+$data6+$data7+$data8+$data9+$data10+$data11+$data12
+                 +$data13+$data14+$data15+$data16+$data17+$data18+$data19+$data20;
+         $this->form_validation->set_rules('txt','Problem','trim|required|xss_clean');
+         $this->form_validation->set_rules('people','Receipient','trim|required|xss_clean');
+         if($this->form_validation->run()===FALSE){
+          $this->load->view('problem_view',$data);
+         }else{
+         $this->load->model('admin_model');
+         $sender=  $this->session->userdata('username');
+         $problem=  $this->input->post('txt');
+         $receiver=  $this->input->post('people');
+         $this->admin_model->reporter($sender,$problem,$receiver);
+         $data['sms']='<label class="label-success">Your problem has sent.!</label>';
+         $this->load->view('problem_view',$data);
          }
      }
  }

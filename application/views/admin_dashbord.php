@@ -88,6 +88,7 @@
                 <?php if(!empty($delete)){    echo '<label class="text-danger">'.$delete.'</label>';}?>
             </div>  
                 </div>
+        
             </div>
     <div class="col-lg-4">
         <div class="panel panel-primary">
@@ -102,16 +103,29 @@
                 <a href="<?php echo site_url('general_admin/change');?>" class="list-group-item">
                         Change password
                     </a>
-                    <a href="#" class="list-group-item">
-                        <img src="<?php echo base_url('img/74.png');?>"> <span class="badge">0</span>
+                <a href="<?php echo site_url('admin_controller/summary');?>" class="list-group-item">
+                        <span class="badge">
+                   <?php if(($Litre_petrol-$sold_litre)<=4000){
+                         echo '<blink>Petrol danger zone click.!</blink>';
+                        }elseif (($Litre_kerosine-$sold_litre2)<=4000){
+                            echo '<blink>Kerosine danger zone click.!</blink>';
+                        }elseif (($Litre_diesel-$sold_litre1)<=4000){
+                            echo '<blink>Diesel danger zone click.!</blink>';
+                        }elseif (($Litre_oil-$sold_litre3)<=4000){
+                            echo '<blink>Oil danger zone click.!</blink>';
+                        }else{
+                            echo '<blink><b>Ok</b></blink>';
+                        }
+                        ?>
+                        </span>
                         Bissness notification
                     </a>
                     <a href="#" class="list-group-item">
-                        <span class="badge">0</span>
+                        <span class="badge"></span>
                         System alerts
                     </a>
-                    <a href="#" class="list-group-item">
-                        <span class="badge">0</span>
+                <a href="<?php echo site_url('admin_controller/summary');?>" class="list-group-item">
+                        <span class="badge">View</span>
                         Balance in Litres
                     </a>
                      <a href="#" class="list-group-item">
@@ -119,11 +133,17 @@
                     
                     </a>
                     <a href="#" class="list-group-item">
-                       <span class="badge">$0</span>
+                       <span class="badge"><?php $total1=$sold_amount1+$sold_amount2+$sold_amount3+$sold_amount4;
+                                $totally=$expected_amount+$expected_amount1+$expected_amount2+$expected_amount3;
+                          echo ''.$totally-$total1;
+                       ?> Tshs</span>
                         Outstanding profit 
                     </a>
                    <a href="#" class="list-group-item">
-                       <span class="badge">$1500000</span>
+                       <span class="badge"><?php $total=$expected_amount+$expected_amount1+$expected_amount2+$expected_amount3;
+                        echo ''.$total;
+                       
+                        ?> Tshs</span>
                         Expected Total profit 
                     </a>
                    <a href="<?php echo site_url('logout');?>" class="list-group-item" >

@@ -632,6 +632,72 @@
         return $array;
     }
  }
-
-}
+ public function view(){
+    $data1=  $this->show_records();
+         $data2=  $this->show_sold();
+         $data3=  $this->show_amount();
+         $data4=  $this->show_sold_amount();
+         $data5= $this->diesel_show();
+         $data6=  $this->diesel_sold();
+         $data7=  $this->diesel_sold_amount();
+         $data8=  $this->diesel_amount();
+         $data9=  $this->kerosine_amount();
+         $data10=  $this->kerosine_show();
+         $data11=  $this->kerosine_sold();
+         $data12=  $this->kerosine_sold_amount();
+         $data13=  $this->oil_amount();
+         $data14=  $this->oil_show();
+         $data15=  $this->oil_sold();
+         $data16=  $this->oil_sold_amount();
+         $data=$data1+$data2+$data3+$data4+$data5+$data6+$data7+$data8+$data9+$data10+$data11+$data12+$data13+$data14+$data15+$data16;
+         $data['activef1']=TRUE;
+         $this->load->view('dashbord',$data);
+ }
+ public function count(){
+     
+     $res1=  $this->db->get_where('tb_problem',array('receiver'=>'Seller','status'=>'unchecked'));
+     if ($res1->num_rows()>0){
+         $data['msg']=$res1;
+         $this->load->view('dashbord_msg',$data);
+     }else {
+      $data['msg1']='<p class="label-info">Inbox Empty.!</p>';
+      $this->load->view('dashbord_msg',$data);  
+     }
+      
+     }
+ 
+ public function msg_view($id){
+    $res= $this->db->get_where('tb_problem',array('id'=>$id));
+    if($res->num_rows()===1){
+        $this->db->where('id',$id);
+        $this->db->update('tb_problem',array('status'=>'checked'));
+        foreach ($res->result() as $ros){
+            $data_sess=array(
+                'problem'=>$ros->problem,
+                'id'=>$ros->id
+            );
+        }
+        unset($ros);
+        $this->load->view('notification_details',$data_sess);
+    }
+ }
+ public function delete($id){
+    $del= $this->db->get_where('tb_problem',array('id'=>$id,'receiver'=>'seller'));
+    if($del->num_rows()===1){
+        $this->db->where('id',$id);
+        $this->db->delete('tb_problem');
+       foreach ($del->result() as $ros){
+            $data_sess=array(
+                'problem'=>$ros->problem,
+                'id'=>$ros->id
+            );
+        }
+        unset($ros);
+        $this->load->view('notification_details',$data_sess);
+ }  else {
+     $data['msg1']='<p class="label-info">Message deleted.!</p>';
+      $this->load->view('dashbord_msg',$data); 
+ }
+ }
+ }
 
