@@ -188,7 +188,7 @@
                     <li class="list-group-item-heading text-info">For  Oil</li>
                    <li class="list-group-item">
                         <span class="badge"><?php echo ''.$number_litre3-$sold_litres3;?> Litres</span>
-                    Remained Litres of diesel
+                    Remained Litres of oil
                     </li>
                     <li class="list-group-item">
                         <span class="badge"><?php echo ''.$purchased_amount3;?> TSHS</span>

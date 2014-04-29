@@ -51,7 +51,7 @@
                 </ul>
                  </div>
             <div class="col-lg-10" style="margin-left: 80px;">
-                   <?php echo form_open('dasbord_problem');?>
+                   <?php echo form_open('dashbord_problem');?>
                     <ul class="list-group">
                         <li class="list-group-item">
                             <label class="text-justify">Report problem</label>
@@ -67,6 +67,9 @@
                         </li>
                     </ul>
                      <?php echo form_close();?>
+                <div class="list-group">
+                    <?php if(!empty($data)){ echo $data;}?>
+                </div>
                 </div>
           </div>
           </div>

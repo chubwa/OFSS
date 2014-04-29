@@ -11,16 +11,18 @@
         }
      }
      public function index(){
-         $this->form_validation->set_rules('ustext','Problem','trim|required|xss_clean');
+         $this->form_validation->set_rules('ustxt','Problem','trim|required|xss_clean');
          $this->form_validation->set_rules('usr','Member','trim|required|xss_clean');
          if($this->form_validation->run()===FALSE){
          $this->load->view('problem_user');
      }  else {
          $this->load->model('problem_model');
          $user=  $this->session->userdata('username');
-         $problem=  $this->input->post('ustext');
-         $problem_choose=  $this->input->post('user');
+         $problem=  $this->input->post('ustxt');
+         $problem_choose=  $this->input->post('usr');
          $this->problem_model-> problem_insert($user,$problem,$problem_choose);
+         $data['data']='<p class="alert-success">Your comment has been sent...!</p>';
+         $this->load->view('problem_user',$data);
      }
      }
  }

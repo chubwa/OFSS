@@ -4,13 +4,13 @@
         <li></li>
     </ul>
     <div class="tab-content" style="display: block">
-        <div class="col-lg-4"  id="dt">
+        <div class="col-lg-3"  id="dt">
             <div class="panel panel-primary">
             <div class="panel-heading">
-                <p>System Setting</p>
+                <p>System Menu</p>
             </div>
             <div class="list-group">
-                   <a href="#" class="list-group-item">
+                <a href="<?php echo site_url('dashbord_problem');?>" class="list-group-item">
                         Report problem
                     </a>
                      

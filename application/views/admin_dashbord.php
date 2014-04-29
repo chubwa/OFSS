@@ -72,6 +72,75 @@
                 </div>
                     </div>
             </div>
+            <div class="in tab-pane <?php if(isset($activef1)){ echo 'active';}?>" id="resource">
+                <div class=" tabcordion tabs-left tabbable">
+                    <ul class=" nav nav-tabs nav-pills">
+                        <li class="active"><a data-target=".p1" data-toggle="tab">PETROL</a></li>
+                        <li class=""><a data-target=".d1" data-toggle="tab">DIESEL</a></li>
+                        <li class=""><a data-target=".k1" data-toggle="tab">KEROSINE</a></li>
+                        <li><a data-target=".o1" data-toggle="tab">OIL</a></li>
+                    </ul>
+                    <div class=" tab-content" style="display:block">
+                        <div class="p1 in tab-pane active">
+                            <ul class=" list-group" style="margin-top: 40px;">
+                                <li class=" list-group-item-success">Petrol summaries</li>
+                                </ul>
+                            <table class="table table-striped table-condensed table-bordered">
+                                <?php if(isset($petrol)){
+                             echo '<tr><th>PETROL LITRE (L)</th><th>PURCHASED AMNT (TSHS)</th><th>EXP AMNT (TSHS)</th><th>DATE OF ENTRANCY</th></tr>';
+                             foreach ($petrol->result() as $p){
+                                 echo '<tr><td>'.$p->Litre_petrol.'</td><td>'.$p->purchased_amount.'</td><td>'.$p->expected_amount.'</td><td>'.$p->entray_date.'</td></tr>';
+                             }
+                                }?>
+                            </table>
+                            <div class=" pagination"></div>
+                        </div>
+                        <div class="d1 in tab-pane">
+                            <ul class=" list-group" style="margin-top: 40px;">
+                                <li class=" list-group-item-success">Diesel summaries</li>
+                                </ul>
+                            <table class="table table-striped table-condensed table-bordered">
+                                <?php if(isset($diesel)){
+                             echo '<tr><th>DIESEL LITRE (L)</th><th>PURCHASED AMNT (TSHS)</th><th>EXP AMNT (TSHS)</th><th>DATE OF ENTRANCY</th></tr>';
+                             foreach ($diesel->result() as $p){
+                                 echo '<tr><td>'.$p->Litre_diesel.'</td><td>'.$p->purchased_amount.'</td><td>'.$p->expected_amount.'</td><td>'.$p->entray_date.'</td></tr>';
+                             }
+                                }?>
+                            </table>
+                            <div class=" pagination"></div>
+                        </div>
+                        <div class="k1 in tab-pane">
+                            <ul class=" list-group" style="margin-top: 40px;">
+                                <li class=" list-group-item-success">Kerosine summaries</li>
+                                </ul>
+                            <table class="table table-striped table-condensed table-bordered">
+                                <?php if(isset($kerosine)){
+                             echo '<tr><th>KEROSINE LITRE (L)</th><th>PURCHASED AMNT (TSHS)</th><th>EXP AMNT (TSHS)</th><th>DATE OF ENTRANCY</th></tr>';
+                             foreach ($kerosine->result() as $p){
+                                 echo '<tr><td>'.$p->Litre_kerosine.'</td><td>'.$p->purchased_amount.'</td><td>'.$p->expected_amount.'</td><td>'.$p->entray_date.'</td></tr>';
+                             }
+                                }?>
+                            </table>
+                            <div class=" pagination"></div>
+                        </div>
+                        <div class="o1 in tab-pane">
+                            <ul class=" list-group" style="margin-top: 40px;">
+                                <li class=" list-group-item-success">Oil summaries</li>
+                                </ul>
+                            <table class="table table-striped table-condensed table-bordered">
+                                <?php if(isset($oil)){
+                             echo '<tr><th>OIL LITRE (L)</th><th>PURCHASED AMNT (TSHS)</th><th>EXP AMNT (TSHS)</th><th>DATE OF ENTRANCY</th></tr>';
+                             foreach ($oil->result() as $p){
+                                 echo '<tr><td>'.$p->Litre_oil.'</td><td>'.$p->purchased_amount.'</td><td>'.$p->expected_amount.'</td><td>'.$p->entray_date.'</td></tr>';
+                             }
+                                }?>
+                            </table>
+                            <div class=" pagination"></div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
             <div class="in tab-pane <?php if(isset($activef2)){ echo 'active';}?>" id="expenses">
                 <legend><label class="text text-center text-justify text-info">Records of Company workers</label></legend>
                 <table class="table table-condensed table-striped table-hover table-bordered">
@@ -120,8 +189,17 @@
                         </span>
                         Bissness notification
                     </a>
-                    <a href="#" class="list-group-item">
-                        <span class="badge"></span>
+                <a href="<?php echo site_url('admin_controller/notify_view');?>" class="list-group-item">
+                        <span class="badge">
+                           <?php 
+                           $res=$this->db->get_where('tb_problem',array('receiver'=>'admin','status'=>'unchecked'));
+                           if($res->num_rows()>0){
+                               echo '<blink>'.$this->db->count_all_results().'</blink>';
+                           }  else {
+                               echo '0';    
+                           }
+                            ?>
+                        </span>
                         System alerts
                     </a>
                 <a href="<?php echo site_url('admin_controller/summary');?>" class="list-group-item">
