@@ -148,9 +148,47 @@
                                 <?php if(!empty($smg7)){ echo $smg7;}?>
                             </div>
                             </div>
+                        </div>
+                        <div class="total in tab-pane <?php if(isset($active4)){ echo 'active';}?>">
+                                <ul class="nav nav-tabs nav-pills nav-justified">
+                                    <li class="<?php if(isset($activetr)){ echo 'active';}?>"><a data-target=".to" data-toggle="tab">Petrol</a></li>
+                                    <li class="<?php if(isset($activetr1)){ echo 'active';}?>"><a data-target=".to1" data-toggle="tab">Diesel</a></li>
+                                    <li class="<?php if(isset($activetr2)){ echo 'active';}?>"><a data-target=".to2" data-toggle="tab">Kerosine</a></li>
+                                    <li class="<?php if(isset($activetr3)){ echo 'active';}?>"><a data-target=".to3" data-toggle="tab">OIl</a></li>
+                                </ul>
+                            <div class="tab-content" style="display:block; padding-top: 30px;">
+                                <div class="to in tab-pane <?php if(isset($activetr)){ echo 'active';}?>">
+                                    <ul class=" list-group">
+                                        <li class=" list-group-item"><span class="badge"><?php echo ''.$seller_name;?></span>Seller Name</li>
+                                        <li class=" list-group-item"><span class="badge"><?php echo ''.$sold_litre;?></span>Petrol Litre sold</li>
+                                        <li class="  list-group-item"><span class=" badge"><?php echo ''.$sold_amountd;?></span>Cash money corrected</li>
+                                    </ul>
+                                </div>
+                                <div class="to1 in tab-pane <?php if(isset($activetr1)){ echo 'active';}?>">
+                                    <ul class=" list-group">
+                                        <li class=" list-group-item"><span class="badge"><?php echo ''.$seller_name1;?></span>Seller Name</li>
+                                        <li class=" list-group-item"><span class="badge"><?php echo ''.$sold_litre1;?></span>Diesel Litre sold</li>
+                                        <li class="  list-group-item"><span class=" badge"><?php echo ''.$sold_amountd1;?></span>Cash money corrected</li>
+                                    </ul>
+                                </div>
+                                <div class="to2 in tab-pane <?php if(isset($activetr2)){ echo 'active';}?>">
+                                    <ul class=" list-group">
+                                        <li class=" list-group-item"><span class=" badge"><img src="<?php echo base_url('img/person.svg');?>">   <?php echo ''.$seller_name2;?></span>Seller Name</li>
+                                        <li class=" list-group-item"><span class=" badge"><?php echo ''.$sold_litre2;?></span>Kerosine Litre sold</li>
+                                        <li class="  list-group-item"><span class=" badge"><?php echo ''.$sold_amountd2;?></span>Cash money corrected</li>
+                                    </ul>
+                                </div>
+                                <div class="to3 in tab-pane <?php if(isset($activetr3)){ echo 'active';}?>">
+                                    <ul class=" list-group">
+                                        <li class=" list-group-item"><span class=" badge"><?php echo ''.$seller_name3;?></span>Seller Name</li>
+                                        <li class=" list-group-item"><span class=" badge"><?php echo ''.$sold_litre3;?></span>Oil Litre sold</li>
+                                        <li class="  list-group-item"><span class=" badge"><?php echo ''.$sold_amountd3;?></span>Cash money corrected</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                        
-                    </div>
+                    
                 </div>
                 <script>
                     $('.datepicker').datepicker();
@@ -233,7 +271,7 @@
                     </a>
                      
                 <a href="<?php echo site_url('logout');?>" class="list-group-item" >
-                     Logout</a>
+                    Logout</a>
             </div>
             
        </div>

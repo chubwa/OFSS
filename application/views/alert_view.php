@@ -23,9 +23,18 @@
                         <span class="badge">home</span>
                         Back to manage product
                     </a>
-                    <a href="#" class="list-group-item">
-                        <span class="badge">view</span>
-                        System alerts
+                    <a href="<?php echo site_url('dashbord/count');?>" class="list-group-item">
+                        <span class="badge">
+                            <?php
+                        $res1=$this->db->get_where('tb_problem',array('receiver'=>'seller','status'=>'unchecked'));
+                        if($res1->num_rows()>0){
+                            echo'<blink>'. $this->db->count_all_results().'</blink>';
+                        }  else {
+                            echo '0'; 
+                         }
+                            ?>
+                        </span>
+                        System notification
                     </a>
                 <a href="<?php echo site_url('admin_controller/summary');?>" class="list-group-item">
                         <span class="badge"></span>

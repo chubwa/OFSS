@@ -27,7 +27,12 @@
          $data14=  $this->oil_show();
          $data15=  $this->oil_sold();
          $data16=  $this->oil_sold_amount();
-         $data=$data1+$data2+$data3+$data4+$data5+$data6+$data7+$data8+$data9+$data10+$data11+$data12+$data13+$data14+$data15+$data16;
+         $data17=  $this->Total();
+        $data18=  $this->Total1();
+        $data19=  $this->Total2();
+        $data20=  $this->Total3();
+        $data=$data1+$data2+$data3+$data4+$data5+$data6+$data7+$data8+$data9+$data10+$data11+
+                $data12+$data13+$data14+$data15+$data16+$data17+$data18+$data19+$data20;
          $data['activef']=TRUE;
          $data['active']=TRUE;
          $data['active5']=TRUE;
@@ -50,7 +55,12 @@
          $data14=  $this->oil_show();
          $data15=  $this->oil_sold();
          $data16=  $this->oil_sold_amount();
-         $data=$data1+$data2+$data3+$data4+$data5+$data6+$data7+$data8+$data9+$data10+$data11+$data12+$data13+$data14+$data15+$data16;
+         $data17=  $this->Total();
+        $data18=  $this->Total1();
+        $data19=  $this->Total2();
+        $data20=  $this->Total3();
+        $data=$data1+$data2+$data3+$data4+$data5+$data6+$data7+$data8+$data9+$data10+$data11+
+                $data12+$data13+$data14+$data15+$data16+$data17+$data18+$data19+$data20;
         $data['activef']=TRUE;
         $data['active']=TRUE;
         $data['active5']=TRUE;
@@ -88,7 +98,12 @@
          $data14=  $this->oil_show();
          $data15=  $this->oil_sold();
          $data16=  $this->oil_sold_amount();
-         $data=$data1+$data2+$data3+$data4+$data5+$data6+$data7+$data8+$data9+$data10+$data11+$data12+$data13+$data14+$data15+$data16;
+         $data17=  $this->Total();
+        $data18=  $this->Total1();
+        $data19=  $this->Total2();
+        $data20=  $this->Total3();
+        $data=$data1+$data2+$data3+$data4+$data5+$data6+$data7+$data8+$data9+$data10+$data11+
+                $data12+$data13+$data14+$data15+$data16+$data17+$data18+$data19+$data20;
         $data['activef']=TRUE;
         $data['active']=TRUE;
         $data['active6']=TRUE;
@@ -128,7 +143,12 @@
          $data14=  $this->oil_show();
          $data15=  $this->oil_sold();
          $data16=  $this->oil_sold_amount();
-         $data=$data1+$data2+$data3+$data4+$data5+$data6+$data7+$data8+$data9+$data10+$data11+$data12+$data13+$data14+$data15+$data16;
+         $data17=  $this->Total();
+        $data18=  $this->Total1();
+        $data19=  $this->Total2();
+        $data20=  $this->Total3();
+        $data=$data1+$data2+$data3+$data4+$data5+$data6+$data7+$data8+$data9+$data10+$data11+
+                $data12+$data13+$data14+$data15+$data16+$data17+$data18+$data19+$data20;
         $data['activef']=TRUE;
         $data['active1']=TRUE;
         $data['active7']=TRUE;
@@ -167,7 +187,12 @@
          $data14=  $this->oil_show();
          $data15=  $this->oil_sold();
          $data16=  $this->oil_sold_amount();
-         $data=$data1+$data2+$data3+$data4+$data5+$data6+$data7+$data8+$data9+$data10+$data11+$data12+$data13+$data14+$data15+$data16;
+         $data17=  $this->Total();
+        $data18=  $this->Total1();
+        $data19=  $this->Total2();
+        $data20=  $this->Total3();
+        $data=$data1+$data2+$data3+$data4+$data5+$data6+$data7+$data8+$data9+$data10+$data11+
+                $data12+$data13+$data14+$data15+$data16+$data17+$data18+$data19+$data20;
         $data['activef']=TRUE;
         $data['active1']=TRUE;
         $data['active8']=TRUE;
@@ -209,7 +234,12 @@
          $data14=  $this->oil_show();
          $data15=  $this->oil_sold();
          $data16=  $this->oil_sold_amount();
-         $data=$data1+$data2+$data3+$data4+$data5+$data6+$data7+$data8+$data9+$data10+$data11+$data12+$data13+$data14+$data15+$data16;
+         $data17=  $this->Total();
+        $data18=  $this->Total1();
+        $data19=  $this->Total2();
+        $data20=  $this->Total3();
+        $data=$data1+$data2+$data3+$data4+$data5+$data6+$data7+$data8+$data9+$data10+$data11+
+                $data12+$data13+$data14+$data15+$data16+$data17+$data18+$data19+$data20;
         $data['activef']=TRUE;
         $data['active2']=TRUE;
         $data['active9']=TRUE;
@@ -249,7 +279,12 @@
          $data14=  $this->oil_show();
          $data15=  $this->oil_sold();
          $data16=  $this->oil_sold_amount();
-         $data=$data1+$data2+$data3+$data4+$data5+$data6+$data7+$data8+$data9+$data10+$data11+$data12+$data13+$data14+$data15+$data16;
+         $data17=  $this->Total();
+        $data18=  $this->Total1();
+        $data19=  $this->Total2();
+        $data20=  $this->Total3();
+        $data=$data1+$data2+$data3+$data4+$data5+$data6+$data7+$data8+$data9+$data10+$data11+
+                $data12+$data13+$data14+$data15+$data16+$data17+$data18+$data19+$data20;
         $data['activef']=TRUE;
         $data['active10']=TRUE;
         $data['active2']=TRUE;
@@ -292,7 +327,12 @@
          $data14=  $this->oil_show();
          $data15=  $this->oil_sold();
          $data16=  $this->oil_sold_amount();
-         $data=$data1+$data2+$data3+$data4+$data5+$data6+$data7+$data8+$data9+$data10+$data11+$data12+$data13+$data14+$data15+$data16;
+         $data17=  $this->Total();
+        $data18=  $this->Total1();
+        $data19=  $this->Total2();
+        $data20=  $this->Total3();
+        $data=$data1+$data2+$data3+$data4+$data5+$data6+$data7+$data8+$data9+$data10+$data11+
+                $data12+$data13+$data14+$data15+$data16+$data17+$data18+$data19+$data20;
         $data['active3']=TRUE;
         $data['activef']=TRUE;
         $data['active11']=TRUE;
@@ -333,7 +373,12 @@
         $data14=  $this->oil_show();
         $data15=  $this->oil_sold();
         $data16=  $this->oil_sold_amount();
-        $data=$data1+$data2+$data3+$data4+$data5+$data6+$data7+$data8+$data9+$data10+$data11+$data12+$data13+$data14+$data15+$data16;
+        $data17=  $this->Total();
+        $data18=  $this->Total1();
+        $data19=  $this->Total2();
+        $data20=  $this->Total3();
+        $data=$data1+$data2+$data3+$data4+$data5+$data6+$data7+$data8+$data9+$data10+$data11+
+                $data12+$data13+$data14+$data15+$data16+$data17+$data18+$data19+$data20;
         $data['activef']=TRUE;
         $data['active3']=TRUE;
         $data['active12']=TRUE;
@@ -698,6 +743,90 @@
      $data['msg1']='<p class="label-info">Message deleted.!</p>';
       $this->load->view('dashbord_msg',$data); 
  }
+ }
+ function Total(){
+     $res=  $this->db->get_where('tb_petrol',array('sold_date'=>  date('m/d/Y')));
+     if($res->num_rows()>0){
+         foreach ($res->result() as $row){
+             $data=array(
+                 'seller_name'=>$row->seller_name,
+                 'sold_litre'=>$row->sold_litre,
+                 'sold_amountd'=>$row->sold_amount
+             );
+         }
+         unset($row);
+         return $data;
+     }  else {
+         $data=array(
+             'seller_name'=>  $this->session->userdata('username'),
+             'sold_litre'=>'Not yet',
+             'sold_amountd'=>'Not yet'
+         );    
+         return $data;
+     }
+ }
+ function Total1(){
+     $res=  $this->db->get_where('tb_diesel',array('sold_date'=>  date('m/d/Y')));
+     if($res->num_rows()>0){
+         foreach ($res->result() as $row){
+             $data=array(
+                 'seller_name1'=>$row->seller_name,
+                 'sold_litre1'=>$row->sold_litre,
+                 'sold_amountd1'=>$row->sold_amount
+             );
+         }
+         unset($row);
+         return $data;
+     }  else {
+         $data=array(
+             'seller_name1'=>  $this->session->userdata('username'),
+             'sold_litre1'=>'Not yet',
+             'sold_amountd1'=>'Not yet'
+         );    
+         return $data;
+     }
+ }
+ function Total2(){
+     $res=  $this->db->get_where('tb_kerosine',array('sold_date'=>  date('m/d/Y')));
+     if($res->num_rows()>0){
+         foreach ($res->result() as $row){
+             $data=array(
+                 'seller_name2'=>$row->seller_name,
+                 'sold_litre2'=>$row->sold_litre,
+                 'sold_amountd2'=>$row->sold_amount
+             );
+         }
+         unset($row);
+         return $data;
+     }  else {
+         $data=array(
+             'seller_name2'=>  $this->session->userdata('username'),
+             'sold_litre2'=>'Not yet',
+             'sold_amountd2'=>'Not yet'
+         );    
+         return $data;
+     }
+ }
+ function Total3(){
+     $res=  $this->db->get_where('tb_oil',array('sold_date'=>  date('m/d/Y')));
+     if($res->num_rows()>0){
+         foreach ($res->result() as $row){
+             $data=array(
+                 'seller_name3'=>$row->seller_name,
+                 'sold_litre3'=>$row->sold_litre,
+                 'sold_amountd3'=>$row->sold_amount
+             );
+         }
+         unset($row);
+         return $data;
+     }  else {
+         $data=array(
+             'seller_name3'=>  $this->session->userdata('username'),
+             'sold_litre3'=>'Not yet',
+             'sold_amountd3'=>'Not yet'
+         );    
+         return $data;
+     }
  }
  }
 

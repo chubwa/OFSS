@@ -142,12 +142,12 @@
                 
             </div>
             <div class="in tab-pane <?php if(isset($activef2)){ echo 'active';}?>" id="expenses">
-                <legend><label class="text text-center text-justify text-info">Records of Company workers</label></legend>
+                <legend><label class="text text-center text-justify text-info" style="padding-top:40px;">Records of Company workers</label></legend>
                 <table class="table table-condensed table-striped table-hover table-bordered">
                     <?php if(isset($results)){
-                     echo '<tr><th>ID</th><th>FIRST NAME</th><th>LAST NAME</th><th>USERNAME</th><th colspan="3" class="text-center">ACTION<b class="caret"></b></th></tr>';
+                     echo '<tr><th>FIRST NAME</th><th>LAST NAME</th><th>USERNAME</th><th colspan="3" class="text-center">ACTION<b class="caret"></b></th></tr>';
                      foreach ($results->result() as $row){
-                         echo '<tr><td>'.$row->id.'</td><td>'.$row->first_name.'</td><td>'.$row->sec_name.'</td><td>'.$row->username.'</td><td><img src="'.base_url('img/51.png').'">'.' '.anchor('admin_controller/delete/'.$row->id,'Delete',array('onclick'=>"return confirm('Are you sure you want to delete this person.?')")).'</td><td><img src="'.base_url('img/39.png').'">'.anchor('admin_controller/update/'.$row->id,'Update').'</td><td><img src="'.base_url('img/46.png').'">'.anchor('admin_controller/diactivate/'.$row->id,'Deactivate',array('onclick'=>"return confirm('Are you sure you want to diactivate this person.?')")).'</td></tr>';
+                         echo '<tr><td>'.$row->first_name.'</td><td>'.$row->sec_name.'</td><td>'.$row->username.'</td><td><span class="btn btn-danger"><img src="'.base_url('img/51.png').'">'.' '.anchor('admin_controller/delete/'.$row->id,'Delete',array('onclick'=>"return confirm('Are you sure you want to delete this person.?')")).'</span></td><td><span class="btn btn-info"><img src="'.base_url('img/39.png').'">'.anchor('admin_controller/update/'.$row->id,'Update').'</span></td><td><span class="btn btn-warning"><img src="'.base_url('img/46.png').'">'.anchor('admin_controller/diactivate/'.$row->id,'Deactivate',array('onclick'=>"return confirm('Are you sure you want to diactivate this person.?')")).'</span></td></tr>';
                      } 
                      }else {
                       echo '<label class="text-info">No records found.!</label>'; 

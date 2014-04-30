@@ -262,6 +262,7 @@
          $res=  $this->db->get_where('tb_user',array('id'=>$id),1);
          if($res->num_rows()===1){
              foreach ($res->result() as $ros){
+                 
                  $data_records=array(
                      'firstname'=>$ros->first_name,
                      'lastname'=>$ros->sec_name,
@@ -269,7 +270,8 @@
                      'email'=>$ros->email,
                      'position'=>$ros->position
                  );
-             }
+         }
+         
              unset($ros);
              $this->load->view('admin_dashbord_update',$data_records);
          }  else {
@@ -293,6 +295,28 @@
          }
      }
      function user(){
+         $data1=  $this->alert();
+         $data2=  $this->alert1();
+         $data3=  $this->alert2();
+         $data4=  $this->alert3();
+         $data5=  $this->alert4();
+         $data6=  $this->alert5();
+         $data7=  $this->alert6();
+         $data8=  $this->alert7();
+         $data9=  $this->show();
+         $data10=  $this->show1();
+         $data11=  $this->show2();
+         $data12=  $this->show3();
+         $data13=  $this->alert8();
+         $data14=  $this->alert9();
+         $data15=  $this->alert10();
+         $data16=  $this->alert11();
+         $data17=  $this->alert12();
+         $data18=  $this->alert13();
+         $data19=  $this->alert14();
+         $data20=  $this->alert15();
+         $data=$data1+$data2+$data3+$data4+$data5+$data6+$data7+$data8+$data9+$data10+$data11+$data12
+                 +$data13+$data14+$data15+$data16+$data17+$data18+$data19+$data20;
        $data['results']=  $this->member();
        $data['activef2']=TRUE;
        $this->load->view('admin_dashbord',$data);

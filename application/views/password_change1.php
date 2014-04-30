@@ -13,35 +13,32 @@
                 <a href="<?php echo site_url('register_controller');?>" class="list-group-item btn-link">
                         Send notifications to member
                    </a>
-                    <a href="#" class="list-group-item">
+                    <a href="<?php echo site_url('admin_controller/problem');?>" class="list-group-item">
                         Report problem
                     </a>
                      <a href="<?php echo site_url('general_admin/change');?>" class="list-group-item">
                         Change password
                     </a>
                 <a href="<?php echo site_url('admin_controller');?>" class="list-group-item">
-                        <span class="badge">0</span>
+                        <span class="badge">home</span>
                         Back to manage product
                     </a>
-                    <a href="#" class="list-group-item">
-                        <span class="badge">0</span>
+                    <a href="<?php echo site_url('admin_controller/notify_view');?>" class="list-group-item">
+                        <span class="badge">
+                           <?php 
+                           $res=$this->db->get_where('tb_problem',array('receiver'=>'admin','status'=>'unchecked'));
+                           if($res->num_rows()>0){
+                               echo '<blink>'.$this->db->count_all_results().'</blink>';
+                           }  else {
+                               echo '0';    
+                           }
+                            ?>
+                        </span>
                         System alerts
                     </a>
-                    <a href="#" class="list-group-item">
-                        <span class="badge">0</span>
+                    <a href="<?php echo site_url('admin_controller/summary');?>" class="list-group-item">
+                        <span class="badge"></span>
                         Balance in Litres
-                    </a>
-                     <a href="#" class="list-group-item">
-                        View summary 
-                    
-                    </a>
-                    <a href="#" class="list-group-item">
-                       <span class="badge">$0</span>
-                        Outstanding profit 
-                    </a>
-                   <a href="#" class="list-group-item">
-                       <span class="badge">$1500000</span>
-                        Expected Total profit 
                     </a>
                     <a href="<?php echo site_url('logout');?>" class="list-group-item" >
                      Logout</a>

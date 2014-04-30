@@ -20,28 +20,20 @@
                         Change password
                     </a>
                 <a href="<?php echo site_url('admin_controller');?>" class="list-group-item">
-                        <span class="badge">0</span>
+                        <span class="badge">home</span>
                         Back to manage product
                     </a>
                     <a href="#" class="list-group-item">
-                        <span class="badge">0</span>
+                        <span class="badge">view</span>
                         System alerts
                     </a>
-                    <a href="#" class="list-group-item">
-                        <span class="badge">0</span>
+                    <a href="<?php echo site_url('admin_controller/summary');?>" class="list-group-item">
+                        <span class="badge">View</span>
                         Balance in Litres
                     </a>
                 <a href="<?php echo site_url('admin_controller/user');?>" class="list-group-item">
                         View user's 
                     
-                    </a>
-                    <a href="#" class="list-group-item">
-                       <span class="badge">$0</span>
-                        Outstanding profit 
-                    </a>
-                   <a href="#" class="list-group-item">
-                       <span class="badge">$1500000</span>
-                        Expected Total profit 
                     </a>
                    <a href="<?php echo site_url('logout');?>" class="list-group-item" >
                      Logout</a>

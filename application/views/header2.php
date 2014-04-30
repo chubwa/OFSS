@@ -5,6 +5,8 @@
         <link rel="stylesheet" href="<?php echo base_url('assets/css/bootstrap.min.css');?>">
         <link rel="stylesheet" href="<?php echo base_url('assets/css/datepicker.css');?>">
         <link rel="stylesheet" href="<?php echo base_url('assets/css/bootstrap-responsive.css');?>">
+        <link rel="stylesheet" href="<?php echo base_url('assets/css/open-iconic-bootstrap.min.css');?>">
+        <link rel="stylesheet" href="<?php echo base_url('assets/css/open-iconic-bootstrap.css');?>">
         <script src="<?php echo base_url('assets/js/jquery-2.0.3.min.js') ?>"></script>
         <script src="<?php echo base_url('assets/js/jquery-1.10.2.js') ?>"></script>
         <script src="<?php echo base_url('assets/js/bootstrap-modal.js') ?>"></script>
@@ -34,7 +36,7 @@
                                 <a class="btn btn-info" href="#"><img src="<?php echo base_url('img/13.png');?>"><i><?php echo $this->session->userdata('username');?></i></a>
                                 <a class="btn btn-info dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="#" >Profile</a></li>
+                                    <li><a href="#">Profile</a></li>
                                     <li><a href="#">Edit</a></li>
                                     <li><a href="#" >Setting</a></li>
                                 </ul>

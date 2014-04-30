@@ -13,19 +13,18 @@
                 <a href="<?php echo site_url('dashbord_problem');?>" class="list-group-item">
                         Report problem
                     </a>
-                     
-                    <a href="<?php echo site_url('dashbord/count');?>" class="list-group-item">
+                    <a href="<?php echo site_url('admin_controller/notify_view');?>" class="list-group-item">
                         <span class="badge">
-                            <?php
-                        $res1=$this->db->get_where('tb_problem',array('receiver'=>'seller','status'=>'unchecked'));
-                        if($res1->num_rows()>0){
-                            echo'<blink>'. $this->db->count_all_results().'</blink>';
-                        }  else {
-                            echo '0'; 
-                         }
+                           <?php 
+                           $res=$this->db->get_where('tb_problem',array('receiver'=>'admin','status'=>'unchecked'));
+                           if($res->num_rows()>0){
+                               echo '<blink>'.$this->db->count_all_results().'</blink>';
+                           }  else {
+                               echo '0';    
+                           }
                             ?>
                         </span>
-                        System notification
+                        System alerts
                     </a>
                     <a href="<?php echo site_url('dashbord/view');?>" class="list-group-item">
                         <span class="badge">view</span>

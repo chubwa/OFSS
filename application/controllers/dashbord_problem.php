@@ -25,4 +25,7 @@
          $this->load->view('problem_user',$data);
      }
      }
+     function today(){
+         
+     }
  }
