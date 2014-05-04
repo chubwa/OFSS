@@ -242,13 +242,16 @@
                 <p>System Menu</p>
             </div>
             <div class="list-group">
-                   <a href="#" class="list-group-item">
-                        Report problem
+                <a href="<?php echo site_url('dashbord_problem');?>" class="list-group-item">
+                       <span class="fa fa-bullseye"></span> 
+                       Report problem
                    </a>
                 <a href="<?php echo site_url('general_setup/change');?>" class="list-group-item">
-                        Change password
+                    <span class="fa fa-key"></span>    
+                    Change password
                     </a>
                 <a href="<?php echo site_url('dashbord/count');?>" class="list-group-item">
+                    <span class="fa fa-flag-o"></span>
                         <span class="badge">
                         <?php
                         $res1=$this->db->get_where('tb_problem',array('receiver'=>'seller','status'=>'unchecked'));
@@ -262,15 +265,17 @@
                         System notification
                     </a>
                 <a href="<?php echo site_url('dashbord/view');?>" class="list-group-item">
-                        <span class="badge"></span>
+                        <span class="fa fa-file"></span>
                         Balance in Litres
                     </a>
                     <a href="#" class="list-group-item">
+                        <span class="fa fa-book fa-fw"></span>
                         View summary 
                     
                     </a>
                      
                 <a href="<?php echo site_url('logout');?>" class="list-group-item" >
+                    <span class=" fa fa-unlock-alt"></span>
                     Logout</a>
             </div>
             

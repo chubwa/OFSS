@@ -7,13 +7,15 @@
         <div class="col-lg-3"  id="dt">
             <div class="panel panel-primary">
             <div class="panel-heading">
-                <p>System Menu</p>
+                <p class="fa fa-retweet">System Menu</p>
             </div>
             <div class="list-group">
                 <a href="<?php echo site_url('dashbord_problem');?>" class="list-group-item">
-                        Report problem
+                    <span class="fa fa-question"></span>   
+                    Report problem
                     </a>
                     <a href="<?php echo site_url('admin_controller/notify_view');?>" class="list-group-item">
+                        <span class="fa fa-flag-checkered"></span>
                         <span class="badge">
                            <?php 
                            $res=$this->db->get_where('tb_problem',array('receiver'=>'admin','status'=>'unchecked'));
@@ -27,13 +29,16 @@
                         System alerts
                     </a>
                     <a href="<?php echo site_url('dashbord/view');?>" class="list-group-item">
+                        <span class="fa fa-file"></span>
                         <span class="badge">view</span>
                         Balance in Litres
                     </a>
                      <a href="<?php echo site_url('logout');?>" class="list-group-item" >
-                     Logout</a>
+                         <span class="fa fa-sign-out"></span>
+                         Logout</a>
                 <a href="<?php echo site_url('general_setup/change');?>" class="list-group-item">
-                        Change password
+                    <span class="fa fa-lock"></span>    
+                    Change password
                     </a>
                     
             </div>

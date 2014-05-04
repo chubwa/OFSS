@@ -85,25 +85,24 @@
                             <ul class=" list-group" style="margin-top: 40px;">
                                 <li class=" list-group-item-success">Petrol summaries</li>
                                 </ul>
-                            <table class="table table-striped table-condensed table-bordered">
+                            <table class="table-condensed" id="mytable">
                                 <?php if(isset($petrol)){
-                             echo '<tr><th>PETROL LITRE (L)</th><th>PURCHASED AMNT (TSHS)</th><th>EXP AMNT (TSHS)</th><th>DATE OF ENTRANCY</th></tr>';
+                             echo '<thead><tr><th>PETROL LITRE (L)</th><th>PURCHASED AMNT (TSHS)</th><th>EXP AMNT (TSHS)</th><th>DATE OF ENTRANCY</th></tr></thead>';
                              foreach ($petrol->result() as $p){
-                                 echo '<tr><td>'.$p->Litre_petrol.'</td><td>'.$p->purchased_amount.'</td><td>'.$p->expected_amount.'</td><td>'.$p->entray_date.'</td></tr>';
+                                 echo '<tbody><tr><td>'.$p->Litre_petrol.'</td><td>'.$p->purchased_amount.'</td><td>'.$p->expected_amount.'</td><td>'.$p->entray_date.'</td></tr></tbody>';
                              }
                                 }?>
                             </table>
-                            <div class=" pagination"></div>
                         </div>
                         <div class="d1 in tab-pane">
                             <ul class=" list-group" style="margin-top: 40px;">
                                 <li class=" list-group-item-success">Diesel summaries</li>
                                 </ul>
-                            <table class="table table-striped table-condensed table-bordered">
+                            <table class="table-condensed" id="mytable1">
                                 <?php if(isset($diesel)){
-                             echo '<tr><th>DIESEL LITRE (L)</th><th>PURCHASED AMNT (TSHS)</th><th>EXP AMNT (TSHS)</th><th>DATE OF ENTRANCY</th></tr>';
+                             echo '<thead><tr><th>DIESEL LITRE (L)</th><th>PURCHASED AMNT (TSHS)</th><th>EXP AMNT (TSHS)</th><th>DATE OF ENTRANCY</th></tr></thead>';
                              foreach ($diesel->result() as $p){
-                                 echo '<tr><td>'.$p->Litre_diesel.'</td><td>'.$p->purchased_amount.'</td><td>'.$p->expected_amount.'</td><td>'.$p->entray_date.'</td></tr>';
+                                 echo '<tbody><tr><td>'.$p->Litre_diesel.'</td><td>'.$p->purchased_amount.'</td><td>'.$p->expected_amount.'</td><td>'.$p->entray_date.'</td></tr></tbody>';
                              }
                                 }?>
                             </table>
@@ -113,29 +112,27 @@
                             <ul class=" list-group" style="margin-top: 40px;">
                                 <li class=" list-group-item-success">Kerosine summaries</li>
                                 </ul>
-                            <table class="table table-striped table-condensed table-bordered">
+                            <table class="table-striped table-condensed" id="mytable2">
                                 <?php if(isset($kerosine)){
-                             echo '<tr><th>KEROSINE LITRE (L)</th><th>PURCHASED AMNT (TSHS)</th><th>EXP AMNT (TSHS)</th><th>DATE OF ENTRANCY</th></tr>';
+                             echo '<thead><tr><th>KEROSINE LITRE (L)</th><th>PURCHASED AMNT (TSHS)</th><th>EXP AMNT (TSHS)</th><th>DATE OF ENTRANCY</th></tr></thead>';
                              foreach ($kerosine->result() as $p){
-                                 echo '<tr><td>'.$p->Litre_kerosine.'</td><td>'.$p->purchased_amount.'</td><td>'.$p->expected_amount.'</td><td>'.$p->entray_date.'</td></tr>';
+                                 echo '<tbody><tr><td>'.$p->Litre_kerosine.'</td><td>'.$p->purchased_amount.'</td><td>'.$p->expected_amount.'</td><td>'.$p->entray_date.'</td></tr></tbody>';
                              }
                                 }?>
                             </table>
-                            <div class=" pagination"></div>
                         </div>
                         <div class="o1 in tab-pane">
                             <ul class=" list-group" style="margin-top: 40px;">
                                 <li class=" list-group-item-success">Oil summaries</li>
                                 </ul>
-                            <table class="table table-striped table-condensed table-bordered">
+                            <table class="table-striped table-condensed" id="mytable3">
                                 <?php if(isset($oil)){
-                             echo '<tr><th>OIL LITRE (L)</th><th>PURCHASED AMNT (TSHS)</th><th>EXP AMNT (TSHS)</th><th>DATE OF ENTRANCY</th></tr>';
+                             echo '<thead><tr><th>OIL LITRE (L)</th><th>PURCHASED AMNT (TSHS)</th><th>EXP AMNT (TSHS)</th><th>DATE OF ENTRANCY</th></tr></thead>';
                              foreach ($oil->result() as $p){
-                                 echo '<tr><td>'.$p->Litre_oil.'</td><td>'.$p->purchased_amount.'</td><td>'.$p->expected_amount.'</td><td>'.$p->entray_date.'</td></tr>';
+                                 echo '<tbody><tr><td>'.$p->Litre_oil.'</td><td>'.$p->purchased_amount.'</td><td>'.$p->expected_amount.'</td><td>'.$p->entray_date.'</td></tr></tbody>';
                              }
                                 }?>
                             </table>
-                            <div class=" pagination"></div>
                         </div>
                     </div>
                 </div>
@@ -143,11 +140,12 @@
             </div>
             <div class="in tab-pane <?php if(isset($activef2)){ echo 'active';}?>" id="expenses">
                 <legend><label class="text text-center text-justify text-info" style="padding-top:40px;">Records of Company workers</label></legend>
-                <table class="table table-condensed table-striped table-hover table-bordered">
+                <table class="table-condensed" id="mytable4">
                     <?php if(isset($results)){
-                     echo '<tr><th>FIRST NAME</th><th>LAST NAME</th><th>USERNAME</th><th colspan="3" class="text-center">ACTION<b class="caret"></b></th></tr>';
+                     echo '<thead><tr><th>FIRST NAME</th><th>LAST NAME</th><th>USERNAME</th><th colspan="3" class="text-center">ACTION<b class="caret"></b></th></tr></thead>';
                      foreach ($results->result() as $row){
-                         echo '<tr><td>'.$row->first_name.'</td><td>'.$row->sec_name.'</td><td>'.$row->username.'</td><td><span class="btn btn-danger"><img src="'.base_url('img/51.png').'">'.' '.anchor('admin_controller/delete/'.$row->id,'Delete',array('onclick'=>"return confirm('Are you sure you want to delete this person.?')")).'</span></td><td><span class="btn btn-info"><img src="'.base_url('img/39.png').'">'.anchor('admin_controller/update/'.$row->id,'Update').'</span></td><td><span class="btn btn-warning"><img src="'.base_url('img/46.png').'">'.anchor('admin_controller/diactivate/'.$row->id,'Deactivate',array('onclick'=>"return confirm('Are you sure you want to diactivate this person.?')")).'</span></td></tr>';
+                         echo '<tbody><tr><td>'.$row->first_name.'</td><td>'.$row->sec_name.'</td>
+                                 <td>'.$row->username.'</td><td><span class="btn btn-danger"><img src="'.base_url('img/51.png').'">'.' '.anchor('admin_controller/delete/'.$row->id,'Delete',array('onclick'=>"return confirm('Are you sure you want to delete this person.?')")).'</span></td><td><span class="btn btn-info"><img src="'.base_url('img/39.png').'">'.anchor('admin_controller/update/'.$row->id,'Update').'</span></td><td><span class="btn btn-warning"><img src="'.base_url('img/46.png').'">'.anchor('admin_controller/diactivate/'.$row->id, $row->status,array('onclick'=>"return confirm('Are you sure you want to diactivate this person.?')")).'</span></td></tr></tbody>';
                      } 
                      }else {
                       echo '<label class="text-info">No records found.!</label>'; 
@@ -162,18 +160,20 @@
     <div class="col-lg-4">
         <div class="panel panel-primary">
             <div class="panel-heading">
-                <p> <img src="<?php echo base_url('img/35.png');?>">System Menu</p>
+                <p> <span class="fa fa-list-alt"></span> System Menu</p>
             </div>
             <div class="list-group">
                 <a href="<?php echo site_url('register_controller');?>" class="list-group-item btn-link">
-                    <span><img src="<?php echo base_url('img/14.png');?>"></span>   
+                    <span class="fa fa-users"></span>   
                     Create member account
                    </a>
                 <a href="<?php echo site_url('general_admin/change');?>" class="list-group-item">
-                        Change password
+                    <span class="fa fa-lock"></span>    
+                    Change password
                     </a>
                 <a href="<?php echo site_url('admin_controller/summary');?>" class="list-group-item">
-                        <span class="badge">
+                    <span class="fa fa-flag-o"></span>    
+                    <span class="badge">
                    <?php if(($Litre_petrol-$sold_litre)<=4000){
                          echo '<blink>Petrol danger zone click.!</blink>';
                         }elseif (($Litre_kerosine-$sold_litre2)<=4000){
@@ -190,7 +190,8 @@
                         Bissness notification
                     </a>
                 <a href="<?php echo site_url('admin_controller/notify_view');?>" class="list-group-item">
-                        <span class="badge">
+                    <span class="fa fa-flag-checkered"></span>    
+                    <span class="badge">
                            <?php 
                            $res=$this->db->get_where('tb_problem',array('receiver'=>'admin','status'=>'unchecked'));
                            if($res->num_rows()>0){
@@ -203,21 +204,25 @@
                         System alerts
                     </a>
                 <a href="<?php echo site_url('admin_controller/summary');?>" class="list-group-item">
-                        <span class="badge">View</span>
+                    <span class="fa fa-file-text-o"></span>    
+                    <span class="badge">View</span>
                         Balance in Litres
                     </a>
                      <a href="#" class="list-group-item">
-                        View summary 
+                         <span class="fa fa-files-o"></span>
+                         View summary 
                     
                     </a>
                     <a href="#" class="list-group-item">
-                       <span class="badge"><?php $total1=$sold_amount1+$sold_amount2+$sold_amount3+$sold_amount4;
+                        <span class="fa fa-dollar"></span>
+                        <span class="badge"><?php $total1=$sold_amount1+$sold_amount2+$sold_amount3+$sold_amount4;
                                 $totally=$expected_amount+$expected_amount1+$expected_amount2+$expected_amount3;
                           echo ''.$totally-$total1;
                        ?> Tshs</span>
                         Outstanding profit 
                     </a>
                    <a href="#" class="list-group-item">
+                       <span class="fa fa-eye-slash"></span>
                        <span class="badge"><?php $total=$expected_amount+$expected_amount1+$expected_amount2+$expected_amount3;
                         echo ''.$total;
                        
@@ -225,7 +230,8 @@
                         Expected Total profit 
                     </a>
                    <a href="<?php echo site_url('logout');?>" class="list-group-item" >
-                     Logout</a>
+                       <span class="fa fa-sign-out"></span>
+                       Logout</a>
             </div>
             
        </div>

@@ -18,14 +18,20 @@
                 <label class="control-label" for="InputEmail"><b>Email or Username</b></label>
                 <div class="controls">
                     <font color="red"><?php echo form_error('us');?></font>
-                    <input type="text" class="form-control" name="us">
+                    <div class="input-group margin-bottom-sm">
+                   <span class="input-group-addon"><i class="fa fa-envelope-o fa-fw"></i></span>
+                   <input class="form-control" type="text" placeholder="Email address or Username" name="us">
+                   </div>
                 </div>
             </div>
             <div class="control-group">
                 <label class="control-label"><b>Password</b></label>
                 <div class="controls">
                     <font color="red"><?php echo form_error('pd');?></font>
-                    <input type="password" name="pd" class="form-control">
+                   <div class="input-group">
+               <span class="input-group-addon"><i class="fa fa-key fa-fw"></i></span>
+               <input class="form-control" type="password" placeholder="Password" name="pd">
+                  </div>
                 </div>
             </div>
                  <div class="control-group">
@@ -41,7 +47,7 @@
             </div>
         </div>
               <ul class="nav nav-pills" style="margin-left: 250px;">
-                <li><a href="<?php echo site_url('register_controller/forgot_password');?>">
+                <li><a href="<?php echo site_url('register_first/forgot_password');?>">
                         Forgot password<span class="badge"></span>
                      </a>
                    </li>

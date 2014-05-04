@@ -108,4 +108,17 @@
              $res=  $this->db->insert('tb_problem',$array_prob);
              return $res;
       }
+      public function edit($id,$position){
+          $array=array(
+              'id'=>$id,
+              'position'=>$position
+          );
+          $res=  $this->db->get_where('tb_user',array('id'=>$id),1);
+          if($res->num_rows()===1){
+              $this->db->where('id',$id);
+              $this->db->update('tb_user',$array);
+          }  else {
+             return FALSE; 
+          }
+      }
   }

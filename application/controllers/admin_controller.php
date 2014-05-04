@@ -239,7 +239,7 @@
          }
      }
      function member(){
-       $query= $this->db->get_where('tb_user',array('status'=>'active'));
+       $query= $this->db->get_where('tb_user');
        if($query->num_rows()>0){
            return $query; 
        }  else {
@@ -264,6 +264,7 @@
              foreach ($res->result() as $ros){
                  
                  $data_records=array(
+                     'id'=>$ros->id,
                      'firstname'=>$ros->first_name,
                      'lastname'=>$ros->sec_name,
                      'username'=>$ros->username,
@@ -279,9 +280,36 @@
          }
      }
      function diactivate($id){
+         $data1=  $this->alert();
+         $data2=  $this->alert1();
+         $data3=  $this->alert2();
+         $data4=  $this->alert3();
+         $data5=  $this->alert4();
+         $data6=  $this->alert5();
+         $data7=  $this->alert6();
+         $data8=  $this->alert7();
+         $data9=  $this->show();
+         $data10=  $this->show1();
+         $data11=  $this->show2();
+         $data12=  $this->show3();
+         $data13=  $this->alert8();
+         $data14=  $this->alert9();
+         $data15=  $this->alert10();
+         $data16=  $this->alert11();
+         $data17=  $this->alert12();
+         $data18=  $this->alert13();
+         $data19=  $this->alert14();
+         $data20=  $this->alert15();
+         $data=$data1+$data2+$data3+$data4+$data5+$data6+$data7+$data8+$data9+$data10+$data11+$data12
+                 +$data13+$data14+$data15+$data16+$data17+$data18+$data19+$data20;
          $data['results']=  $this->member();
+         $data['petrol']=  $this->petrol_summaries();
+         $data['diesel']=  $this->diesel_summaries();
+         $data['kerosine']=  $this->kerosine_summaries();
+         $data['oil']=  $this->oil_summaries();
          $data['activef2']=TRUE;
-         $res=  $this->db->get_where('tb_user',array('id'=>$id),1);
+         $res=  $this->db->get_where('tb_user',array('id'=>$id,'status'=>'active'),1);
+         $res1=  $this->db->get_where('tb_user',array('id'=>$id,'status'=>'diactive'),1);
          if($res->num_rows()===1){
              $active=array(
                  'id'=>$id,
@@ -290,7 +318,15 @@
              $this->db->where('id',$id);
             $this->db->update('tb_user',$active);
             $this->load->view('admin_dashbord',$data);
-         }  else {
+         }elseif($res1->num_rows()===1){  
+            $diactivate=array(
+                'id'=>$id,
+                'status'=>'active'
+            );
+            $this->db->where('id',$id);
+            $this->db->update('tb_user',$diactivate);
+            $this->load->view('admin_dashbord',$data);
+         }else {
              return FALSE;
          }
      }
@@ -318,6 +354,10 @@
          $data=$data1+$data2+$data3+$data4+$data5+$data6+$data7+$data8+$data9+$data10+$data11+$data12
                  +$data13+$data14+$data15+$data16+$data17+$data18+$data19+$data20;
        $data['results']=  $this->member();
+       $data['petrol']=  $this->petrol_summaries();
+       $data['diesel']=  $this->diesel_summaries();
+       $data['kerosine']=  $this->kerosine_summaries();
+       $data['oil']=  $this->oil_summaries();
        $data['activef2']=TRUE;
        $this->load->view('admin_dashbord',$data);
      }
@@ -796,6 +836,14 @@
      function oil_summaries(){
          $res=  $this->db->get('tb_oil');
          return $res;
+     }
+     function edit($id){
+         
+         $position=  $this->input->post('position');
+         $this->load->model('admin_model');
+         $this->admin_model->edit($id,$position);
+         echo '<p class="alert-success">successifully updated</p>';
+        
      }
  }
 

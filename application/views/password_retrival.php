@@ -7,7 +7,7 @@
             <div class="well-sm">
                 <div id="load"><?php if(!empty($data1)){ echo $data1;}?></div>
                 <div class="hd">
-            <?php echo form_open('register_controller/password_retrival',array('class'=>'form-horizontal'));?>
+            <?php echo form_open('register_first/password_retrival',array('class'=>'form-horizontal'));?>
             <div class="control-group">
                 <label class="control-label" for="InputEmail"><b>Email or Username</b></label>
                 <div class="controls">
@@ -40,7 +40,7 @@
                 <li><a href="<?php echo site_url('login');?>">
                         Login<span class="badge"></span>
                    </a></li>
-                   <li><a href="<?php echo site_url('register_controller/forgot_password');?>">
+                   <li><a href="<?php echo site_url('register_first/forgot_password');?>">
                         Forgot password<span class="badge"></span>
                      </a>
                    </li>

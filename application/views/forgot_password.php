@@ -5,13 +5,16 @@
             <div class="panel panel-primary " style="margin-left: 250px;">
             <div class="panel-heading"><label>Forgot password</label></div>
             <div class="well-sm">
-            <?php echo form_open('register_controller/forgot_password',array('class'=>'form-horizontal'));?>
+            <?php echo form_open('register_first/forgot_password',array('class'=>'form-horizontal'));?>
                 <label class=" label label-info">Please enter your Email or username to retrieve password*</label>
             <div class="control-group">
                 <label class="control-label" for="InputEmail"><b>Email or Username</b></label>
                 <div class="controls">
                     <font color="red"><?php echo form_error('us');?></font>
-                   <input type="text" class="form-control" name="us">
+                   <div class="input-group margin-bottom-sm">
+                   <span class="input-group-addon"><i class="fa fa-envelope-o fa-fw"></i></span>
+                   <input class="form-control" type="text" placeholder="Email address or Username" name="us">
+                   </div>
                 </div>
             </div>
                 

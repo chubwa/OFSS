@@ -11,32 +11,38 @@
             </div>
             <div class="list-group">
                 <a href="<?php echo site_url('register_controller');?>" class="list-group-item btn-link">
-                        Send notifications to member
+                    <span class="fa fa-flag-o"></span>    
+                    Send notifications to member
                    </a>
                     <a href="#" class="list-group-item">
+                        <span class="fa fa-question"></span>
                         Report problem
                     </a>
                 <a href="<?php echo site_url('general_admin/change');?>" class="list-group-item">
-                        Change password
+                    <span class="fa fa-lock"></span>    
+                    Change password
                     </a>
                 <a href="<?php echo site_url('admin_controller');?>" class="list-group-item">
-                        <span class="badge">home</span>
+                    <span class="fa fa-home"></span>    
+                    <span class="badge">home</span>
                         Back to manage product
                     </a>
                     <a href="#" class="list-group-item">
-                        <span class="badge">view</span>
+                        <span class="fa fa-flag-checkered"></span> <span class="badge">view</span>
                         System alerts
                     </a>
                     <a href="<?php echo site_url('admin_controller/summary');?>" class="list-group-item">
-                        <span class="badge">View</span>
+                        <span class="fa fa-file-text"></span><span class="badge">View</span>
                         Balance in Litres
                     </a>
                 <a href="<?php echo site_url('admin_controller/user');?>" class="list-group-item">
-                        View user's 
+                    <span class="fa fa-users"></span>    
+                    View user's 
                     
                     </a>
                    <a href="<?php echo site_url('logout');?>" class="list-group-item" >
-                     Logout</a>
+                       <span class="fa fa-sign-out"></span>
+                       Logout</a>
             </div>
             
        </div>
@@ -72,13 +78,37 @@
                     <div class="form-group">
                         <label for="position" class="col-lg-4 control-label">Position</label>
                         <div class="col-lg-8">
-                            <table class="table table-condensed table-responsive"><tr><td><?php echo ''.$position;?></td><td class="menu"><a href=""><img src="<?php echo base_url('img/39.png');?>">Edit</a>
+                            <table class="table table-condensed table-responsive"><tr><td><?php echo ''.$position;?></td><td class="menu"><button class="btn btn-sm btn-primary" data-toggle="modal" data-target=".bs-example-modal-sm"><img src="<?php echo base_url('img/39.png');?>">Edit</button>
                                     </td></tr></table>
-                            <table class=" table table-condensed" id="sct">
-                                               <?php echo form_open('',array('class'=>'form-inline'));?>
-                                <tr><td><input type="text" name="edit" class="form-control input-sm"></td><td>
-                                                <input type="submit" class="btn btn-primary" value="EDIT">
-                                                <?php echo form_close();?></td></tr></table>
+                           <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                           <div class="modal-dialog modal-sm">
+                         <div class="modal-content">
+                          <div class="modal-body">
+                       <button type="button" class="close" data-dismiss="modal">&times;</button>
+                       <div class="modal-header"><label class="text-center text-primary">Update user position</label></div>
+                        <br> 
+                        <?php echo form_close();?>
+                        <div class="success"><?php if(!empty($success)){ echo $success;}?></div>
+                        <?php echo form_open('admin_controller/edit/'.$id,array('id'=>'ajax'));?>
+                        <div class="form-group">
+                        <label for="occupation" class="col-lg-4 control-label">Position</label>
+                        <div class="col-lg-8">
+                            <select name="position" class="form-control" required>
+                                <option value=""></option>
+                                <option value="user">Seller</option>
+                                <option value="admin">Administrator</option>
+                                <option value="accountant">Accountant</option>
+                            </select>
+                        </div>
+                         </div>
+                         </div>
+                         <div class="modal-footer">
+                         <button type="submit" name="edit" class="btn btn btn-info btn-sm">Save changes</button>
+                         <button type="button" class="btn btn-warning btn-sm" data-dismiss="modal">Close</button></div>
+                         <?php echo form_close();?>
+                           </div>
+                           </div>
+                           </div>
                                      </div>
                                      </div>
                 </div>
@@ -89,11 +119,13 @@
         </div>
         
    <script>
-   $(document).ready(function(){
-   $('#sct').hide();
-   $('.menu').click(function(){
-   $('#sct').show();
-    });
+   $('#ajax').submit(function(e){
+       e.preventDefault();
+       var formdata=$(this).serializeArray();
+       var formurl="<?php echo site_url('admin_controller/edit/'.$id);?>";
+       $.post(formurl,formdata,function(data){
+           $('.success').html(data);
+       });
    });
 </script>
 <?php include_once 'footer.php';?>

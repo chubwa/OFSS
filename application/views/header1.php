@@ -5,6 +5,7 @@
         <link rel="stylesheet" href="<?php echo base_url('assets/css/ofss.css');?>">
         <link rel="stylesheet" href="<?php echo base_url('assets/css/bootstrap.min.css');?>">
         <link rel="stylesheet" href="<?php echo base_url('assets/css/datepicker.css');?>">
+        <link rel="stylesheet" href="<?php echo base_url('assets/font-awesome/css/font-awesome.min.css');?>">
         <script src="<?php echo base_url('assets/js/bootstrap-alert.js');?>"></script>
         <script src="<?php echo base_url('assets/js/bootstrap.js');?>"></script>
         <script src="<?php echo base_url('assets/js/bootstrap-min.js');?>"></script>

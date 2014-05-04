@@ -7,23 +7,28 @@
         <div class="col-lg-4"  id="dt">
             <div class="panel panel-primary">
             <div class="panel-heading">
-                <p>System Setting</p>
+                <p class="fa fa-retweet">System Setting</p>
             </div>
             <div class="list-group">
                 <a href="<?php echo site_url('register_controller');?>" class="list-group-item btn-link">
-                        Send notifications to member
+                    <span class="fa fa-flag"></span>    
+                    Send notifications to member
                    </a>
                     <a href="<?php echo site_url('admin_controller/problem');?>" class="list-group-item">
+                        <span class="fa fa-question"></span>
                         Report problem
                     </a>
                      <a href="<?php echo site_url('general_admin/change');?>" class="list-group-item">
-                        Change password
+                         <span class="fa fa-lock"></span>
+                         Change password
                     </a>
                 <a href="<?php echo site_url('admin_controller');?>" class="list-group-item">
-                        <span class="badge">home</span>
+                    <span class="fa fa-home fa-fw"></span>    
+                    <span class="badge">home</span>
                         Back to manage product
                     </a>
                     <a href="<?php echo site_url('admin_controller/notify_view');?>" class="list-group-item">
+                        <span class="fa fa-spin fa-flag"></span>
                         <span class="badge">
                            <?php 
                            $res=$this->db->get_where('tb_problem',array('receiver'=>'admin','status'=>'unchecked'));
@@ -37,11 +42,13 @@
                         System alerts
                     </a>
                     <a href="<?php echo site_url('admin_controller/summary');?>" class="list-group-item">
+                        <span class="fa fa-file-o"></span>
                         <span class="badge"></span>
                         Balance in Litres
                     </a>
                     <a href="<?php echo site_url('logout');?>" class="list-group-item" >
-                     Logout</a>
+                        <span class="fa fa-sign-out"></span>
+                        Logout</a>
             </div>
             
        </div>

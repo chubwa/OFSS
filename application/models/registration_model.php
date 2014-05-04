@@ -3,13 +3,14 @@
      function __construct() {
          parent::__construct();
      }
-     function registration($first_name,$sec_name,$username,$email,$password){
+     function registration($first_name,$sec_name,$username,$email,$password,$position){
          $sess_data=array(
              'first_name'=>$first_name,
              'sec_name'=>$sec_name,
              'username'=>$username,
              'email'=>$email,
-             'password'=>$password
+             'password'=>$password,
+             'position'=>$position
          );
          $this->session->set_userdata($sess_data);
          $result=  $this->db->insert('tb_user',$sess_data);

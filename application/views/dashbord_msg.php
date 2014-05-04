@@ -7,17 +7,20 @@
         <div class="col-lg-3"  id="dt">
             <div class="panel panel-primary">
             <div class="panel-heading">
-                <p>System Menu</p>
+                <p class="fa fa-list-ul">System Menu</p>
             </div>
             <div class="list-group">
                 <a href="<?php echo site_url('dashbord_problem');?>" class="list-group-item">
-                        Report problem
+                    <span class="fa fa-question-circle"></span>    
+                    Report problem
                    </a>
                 <a href="<?php echo site_url('general_setup/change');?>" class="list-group-item">
-                        Change password
+                    <span class="fa fa-lock fa-fw"></span>    
+                    Change password
                     </a>
                 <a href="<?php echo site_url('dashbord/count');?>" class="list-group-item">
-                        <span class="badge">
+                    <span class="fa fa-flag-checkered"></span>    
+                    <span class="badge">
                             <?php
                         $res1=$this->db->get_where('tb_problem',array('receiver'=>'seller','status'=>'unchecked'));
                         if($res1->num_rows()>0){
@@ -30,16 +33,19 @@
                         System notification
                     </a>
                 <a href="<?php echo site_url('dashbord/view');?>" class="list-group-item">
-                        <span class="badge"></span>
+                    <span class="fa fa-file-o"></span>    
+                    <span class="badge"></span>
                         Balance in Litres
                     </a>
                     <a href="#" class="list-group-item">
+                        <span class="fa fa-files-o"></span>
                         View summary 
                     
                     </a>
                      
                 <a href="<?php echo site_url('logout');?>" class="list-group-item" >
-                     Logout</a>
+                    <span class="fa fa-sign-out"></span>
+                    Logout</a>
             </div>
             
        </div>

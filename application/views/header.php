@@ -5,6 +5,7 @@
         <link rel="stylesheet" href="<?php echo base_url('assets/css/ofss.css');?>">
         <link rel="stylesheet" href="<?php echo base_url('assets/css/bootstrap.min.css');?>">
         <link rel="stylesheet" href="<?php echo base_url('assets/css/datepicker.css');?>">
+        <link rel="stylesheet" href="<?php echo base_url('assets/font-awesome/css/font-awesome.min.css');?>">
         <script src="<?php echo base_url('assets/js/bootstrap-alert.js');?>"></script>
         <script src="<?php echo base_url('assets/js/bootstrap.js');?>"></script>
         <script src="<?php echo base_url('assets/js/bootstrap-min.js');?>"></script>
@@ -18,7 +19,7 @@
             <div class="container">
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav pull-right">
-                        <li class="active"><a href="#"><b></b>Home</a></li>
+                        <li class="active"><a href="#" class="fa fa-home"><b></b>Home</a></li>
                     </ul>
                 </div>
             </div>

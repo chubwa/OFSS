@@ -62,11 +62,11 @@
         }
      }
      function master_page($username){
-         $result=  $this->db->get_where('tb_user',array('email'=>$username,'position'=>'user'));
+         $result=  $this->db->get_where('tb_user',array('email'=>$username,'position'=>'seller'));
          $result1=  $this->db->get_where('tb_user',array('email'=>$username,'position'=>'admin'));
          if($result->num_rows()===1){
            $array_sess=array(
-               'apartment'=>'user'
+               'apartment'=>'seller'
            );  
            $this->session->set_userdata($array_sess);
            redirect('dashbord');
@@ -79,11 +79,11 @@
         }
      }
      function dashbord($username){
-         $query=  $this->db->get_where('tb_user',array('username'=>$username,'position'=>'user'));
+         $query=  $this->db->get_where('tb_user',array('username'=>$username,'position'=>'seller'));
          $query1=  $this->db->get_where('tb_user',array('username'=>$username,'position'=>'admin'));
          if($query->num_rows()===1){
              $sess_array=array(
-                 'apartment'=>'user'
+                 'apartment'=>'seller'
              );
              $this->session->set_userdata($sess_array);
              redirect('dashbord');

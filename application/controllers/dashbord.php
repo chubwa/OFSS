@@ -6,7 +6,7 @@
          $this->load->library('form_validation');
          if(!$this->session->userdata('logged_in')){
              redirect('logout'); 
-         }elseif ($this->session->userdata('apartment')!=='user') {
+         }elseif ($this->session->userdata('apartment')!=='seller') {
              redirect('logout'); 
         }
      }
@@ -678,23 +678,28 @@
     }
  }
  public function view(){
-    $data1=  $this->show_records();
-         $data2=  $this->show_sold();
-         $data3=  $this->show_amount();
-         $data4=  $this->show_sold_amount();
-         $data5= $this->diesel_show();
-         $data6=  $this->diesel_sold();
-         $data7=  $this->diesel_sold_amount();
-         $data8=  $this->diesel_amount();
-         $data9=  $this->kerosine_amount();
-         $data10=  $this->kerosine_show();
-         $data11=  $this->kerosine_sold();
-         $data12=  $this->kerosine_sold_amount();
-         $data13=  $this->oil_amount();
-         $data14=  $this->oil_show();
-         $data15=  $this->oil_sold();
-         $data16=  $this->oil_sold_amount();
-         $data=$data1+$data2+$data3+$data4+$data5+$data6+$data7+$data8+$data9+$data10+$data11+$data12+$data13+$data14+$data15+$data16;
+         $data1=  $this->show_records();
+        $data2=  $this->show_sold();
+        $data3=  $this->show_amount();
+        $data4=  $this->show_sold_amount();
+        $data5= $this->diesel_show();
+        $data6=  $this->diesel_sold();
+        $data7=  $this->diesel_sold_amount();
+        $data8=  $this->diesel_amount();
+        $data9=  $this->kerosine_amount();
+        $data10=  $this->kerosine_show();
+        $data11=  $this->kerosine_sold();
+        $data12=  $this->kerosine_sold_amount();
+        $data13=  $this->oil_amount();
+        $data14=  $this->oil_show();
+        $data15=  $this->oil_sold();
+        $data16=  $this->oil_sold_amount();
+        $data17=  $this->Total();
+        $data18=  $this->Total1();
+        $data19=  $this->Total2();
+        $data20=  $this->Total3();
+        $data=$data1+$data2+$data3+$data4+$data5+$data6+$data7+$data8+$data9+$data10+$data11+
+                $data12+$data13+$data14+$data15+$data16+$data17+$data18+$data19+$data20;
          $data['activef1']=TRUE;
          $this->load->view('dashbord',$data);
  }
